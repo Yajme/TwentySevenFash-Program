@@ -39,7 +39,7 @@ Public Class Login
             If table.Rows(0)("USERTYPE") = "admin" Then
                 Dim dashboardmain As New Dashboard
                 Dashboard.dashboardmain = txtUsername.Text
-                Dashboard.Show()
+                Form2.Show()
                 Me.Hide()
 
             End If
