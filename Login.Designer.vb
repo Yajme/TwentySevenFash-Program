@@ -44,9 +44,9 @@ Partial Class Login
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(135, 40)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(251, 31)
+        Me.Label1.Size = New System.Drawing.Size(233, 31)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Twenty Seven Fashs "
+        Me.Label1.Text = "Twenty Seven Fash"
         '
         'txtUsername
         '
