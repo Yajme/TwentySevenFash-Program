@@ -16,7 +16,7 @@ Public Class Dashboard
         frm.Show()
     End Sub
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        changeMenu(dashboardHome)
+        ' changeMenu(dashboardHome)
     End Sub
 
     Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
@@ -28,7 +28,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
-        changeMenu(dashboardInventory)
+        '  changeMenu(dashboardInventory)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
