@@ -20,7 +20,7 @@ Public Class Login
         End If
 
         Try
-            con = New SqlConnection("Data Source=<source>; Initial Catalog=<databasename>;Integrated Security=True")
+            con = New SqlConnection("Data Source=LAPTOP-5ILOR9MQ; Initial Catalog=TwentySevenFash;Integrated Security=True")
             con.Open()
             cmd = New SqlCommand("select * from users where username= @username and password= @password", con)
 
@@ -37,9 +37,9 @@ Public Class Login
                 MsgBox("Enter Valid username and password", MsgBoxStyle.OkOnly, "Error")
             End If
             If table.Rows(0)("USERTYPE") = "admin" Then
-                Dim adminmain As New Admin
-                Admin.adminmain = txtUsername.Text
-                Admin.Show()
+                Dim dashboardmain As New Dashboard
+                Dashboard.dashboardmain = txtUsername.Text
+                Dashboard.Show()
                 Me.Hide()
 
             End If
