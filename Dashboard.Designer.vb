@@ -33,7 +33,14 @@ Partial Class Dashboard
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MENUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SidePanel.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'SidePanel
@@ -43,9 +50,9 @@ Partial Class Dashboard
         Me.SidePanel.Controls.Add(Me.btnSales)
         Me.SidePanel.Controls.Add(Me.btnPOS)
         Me.SidePanel.Controls.Add(Me.btnHome)
-        Me.SidePanel.Location = New System.Drawing.Point(1, 0)
+        Me.SidePanel.Location = New System.Drawing.Point(1, 31)
         Me.SidePanel.Name = "SidePanel"
-        Me.SidePanel.Size = New System.Drawing.Size(280, 724)
+        Me.SidePanel.Size = New System.Drawing.Size(280, 674)
         Me.SidePanel.TabIndex = 0
         '
         'Panel2
@@ -132,6 +139,47 @@ Partial Class Dashboard
         Me.lblTime.TabIndex = 3
         Me.lblTime.Text = "00:00:00"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MENUToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1340, 28)
+        Me.MenuStrip1.TabIndex = 4
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'MENUToolStripMenuItem
+        '
+        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MENUToolStripMenuItem.Name = "MENUToolStripMenuItem"
+        Me.MENUToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
+        Me.MENUToolStripMenuItem.Text = "MENU"
+        '
+        'ChangePasswordToolStripMenuItem
+        '
+        Me.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem"
+        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ChangePasswordToolStripMenuItem.Text = "Change Password"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
+        'LogoutToolStripMenuItem
+        '
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -141,10 +189,14 @@ Partial Class Dashboard
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.PanelContainer)
         Me.Controls.Add(Me.SidePanel)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximumSize = New System.Drawing.Size(1358, 764)
         Me.Name = "Dashboard"
         Me.Text = "Dashboard"
         Me.SidePanel.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -160,4 +212,10 @@ Partial Class Dashboard
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblDate As Label
     Friend WithEvents lblTime As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents MENUToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChangePasswordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
 End Class

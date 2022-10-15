@@ -9,7 +9,9 @@ Public Class Dashboard
     Public Shared dashboardmain
     Private Sub changeMenu(frm As Form)
         PanelContainer.Controls.Clear()
-        frm.TopMost = False
+        frm.TopMost = True
+        frm.TopLevel = False
+        frm.Dock = DockStyle.Fill
         PanelContainer.Controls.Add(frm)
         frm.Show()
     End Sub
@@ -32,5 +34,9 @@ Public Class Dashboard
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblDate.Text = DateString
         lblTime.Text = TimeString
+    End Sub
+
+    Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
