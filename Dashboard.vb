@@ -3,7 +3,7 @@ Imports FontAwesome.Sharp
 
 
 Public Class Dashboard
-    Dim con As New SqlConnection("Data Source=LAPTOP-5ILOR9MQ;Initial Catalog=TwentySevenFash;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Public Shared dashboardmain
@@ -31,12 +31,12 @@ Public Class Dashboard
         '  changeMenu(dashboardInventory)
     End Sub
 
+    Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'changeMenu(dashboardHome)
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblDate.Text = DateString
         lblTime.Text = TimeString
-    End Sub
-
-    Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

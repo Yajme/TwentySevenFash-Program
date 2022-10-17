@@ -22,12 +22,6 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="FontAwesome.WPF">
-      <HintPath>..\..\..\..\..\Library\Downloads\FontAwesome.WPF.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
   
   <ItemGroup>
     <Compile Update="My Project\Application.Designer.vb">

@@ -20,7 +20,7 @@ Public Class Login
         End If
 
         Try
-            con = New SqlConnection("Data Source=LAPTOP-5ILOR9MQ; Initial Catalog=TwentySevenFash;Integrated Security=True")
+            con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
             con.Open()
             cmd = New SqlCommand("select * from users where username= @username and password= @password", con)
 
@@ -39,7 +39,7 @@ Public Class Login
             If table.Rows(0)("USERTYPE") = "admin" Then
                 Dim dashboardmain As New Dashboard
                 Dashboard.dashboardmain = txtUsername.Text
-                Form2.Show()
+                Dashboard.Show()
                 Me.Hide()
 
             End If
@@ -54,11 +54,7 @@ Public Class Login
 
     End Sub
 
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
-    End Sub
 End Class
