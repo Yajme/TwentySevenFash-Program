@@ -3,7 +3,7 @@ Imports FontAwesome.Sharp
 
 
 Public Class Dashboard
-    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\db\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Public Shared dashboardmain
