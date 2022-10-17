@@ -45,14 +45,15 @@ Partial Class Dashboard
         '
         'SidePanel
         '
+        Me.SidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.SidePanel.Controls.Add(Me.btnHome)
         Me.SidePanel.Controls.Add(Me.Panel2)
         Me.SidePanel.Controls.Add(Me.btnInventory)
         Me.SidePanel.Controls.Add(Me.btnSales)
         Me.SidePanel.Controls.Add(Me.btnPOS)
-        Me.SidePanel.Controls.Add(Me.btnHome)
-        Me.SidePanel.Location = New System.Drawing.Point(1, 31)
+        Me.SidePanel.Location = New System.Drawing.Point(1, 34)
         Me.SidePanel.Name = "SidePanel"
-        Me.SidePanel.Size = New System.Drawing.Size(280, 674)
+        Me.SidePanel.Size = New System.Drawing.Size(280, 684)
         Me.SidePanel.TabIndex = 0
         '
         'Panel2
@@ -64,10 +65,14 @@ Partial Class Dashboard
         '
         'btnInventory
         '
+        Me.btnInventory.FlatAppearance.BorderSize = 0
+        Me.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInventory.Font = New System.Drawing.Font("Quicksand", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnInventory.ForeColor = System.Drawing.Color.White
         Me.btnInventory.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnInventory.IconColor = System.Drawing.Color.Black
         Me.btnInventory.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnInventory.Location = New System.Drawing.Point(0, 526)
+        Me.btnInventory.Location = New System.Drawing.Point(-1, 485)
         Me.btnInventory.Name = "btnInventory"
         Me.btnInventory.Size = New System.Drawing.Size(280, 132)
         Me.btnInventory.TabIndex = 3
@@ -76,22 +81,30 @@ Partial Class Dashboard
         '
         'btnSales
         '
+        Me.btnSales.FlatAppearance.BorderSize = 0
+        Me.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSales.Font = New System.Drawing.Font("Quicksand", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnSales.ForeColor = System.Drawing.Color.White
         Me.btnSales.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnSales.IconColor = System.Drawing.Color.Black
         Me.btnSales.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSales.Location = New System.Drawing.Point(0, 398)
+        Me.btnSales.Location = New System.Drawing.Point(-1, 357)
         Me.btnSales.Name = "btnSales"
-        Me.btnSales.Size = New System.Drawing.Size(280, 132)
+        Me.btnSales.Size = New System.Drawing.Size(278, 132)
         Me.btnSales.TabIndex = 2
         Me.btnSales.Text = "Sales"
         Me.btnSales.UseVisualStyleBackColor = True
         '
         'btnPOS
         '
+        Me.btnPOS.FlatAppearance.BorderSize = 0
+        Me.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPOS.Font = New System.Drawing.Font("Quicksand", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnPOS.ForeColor = System.Drawing.Color.White
         Me.btnPOS.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnPOS.IconColor = System.Drawing.Color.Black
         Me.btnPOS.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPOS.Location = New System.Drawing.Point(0, 270)
+        Me.btnPOS.Location = New System.Drawing.Point(0, 229)
         Me.btnPOS.Name = "btnPOS"
         Me.btnPOS.Size = New System.Drawing.Size(280, 132)
         Me.btnPOS.TabIndex = 1
@@ -100,10 +113,14 @@ Partial Class Dashboard
         '
         'btnHome
         '
+        Me.btnHome.FlatAppearance.BorderSize = 0
+        Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHome.Font = New System.Drawing.Font("Quicksand", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnHome.ForeColor = System.Drawing.Color.White
         Me.btnHome.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnHome.IconColor = System.Drawing.Color.Black
         Me.btnHome.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnHome.Location = New System.Drawing.Point(0, 143)
+        Me.btnHome.Location = New System.Drawing.Point(0, 102)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Size = New System.Drawing.Size(280, 132)
         Me.btnHome.TabIndex = 0
@@ -141,43 +158,46 @@ Partial Class Dashboard
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.MenuStrip1.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MENUToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1340, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1340, 38)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MENUToolStripMenuItem
         '
         Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MENUToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.MENUToolStripMenuItem.Name = "MENUToolStripMenuItem"
-        Me.MENUToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
+        Me.MENUToolStripMenuItem.Size = New System.Drawing.Size(84, 34)
         Me.MENUToolStripMenuItem.Text = "MENU"
         '
         'ChangePasswordToolStripMenuItem
         '
         Me.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem"
-        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(265, 34)
         Me.ChangePasswordToolStripMenuItem.Text = "Change Password"
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(265, 34)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(265, 34)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(265, 34)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'Dashboard
@@ -185,11 +205,11 @@ Partial Class Dashboard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1340, 717)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.lblTime)
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.PanelContainer)
         Me.Controls.Add(Me.SidePanel)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximumSize = New System.Drawing.Size(1358, 764)
         Me.Name = "Dashboard"
