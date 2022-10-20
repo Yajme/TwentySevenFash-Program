@@ -39,4 +39,8 @@ Public Class Dashboard
         lblDate.Text = DateString
         lblTime.Text = TimeString
     End Sub
+
+    Private Sub PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles PanelContainer.Paint
+
+    End Sub
 End Class
