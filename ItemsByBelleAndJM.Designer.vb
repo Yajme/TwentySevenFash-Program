@@ -30,6 +30,7 @@ Partial Class ItemsByBelleAndJM
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,6 +38,7 @@ Partial Class ItemsByBelleAndJM
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(278, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(974, 670)
@@ -45,8 +47,9 @@ Partial Class ItemsByBelleAndJM
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(288, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(116, 26)
@@ -56,13 +59,14 @@ Partial Class ItemsByBelleAndJM
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(288, 82)
+        Me.Label2.ForeColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(10, 67)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 20)
+        Me.Label2.Size = New System.Drawing.Size(59, 20)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "ITEM ID:"
+        Me.Label2.Text = "Search:"
         '
         'TextBox1
         '
@@ -92,7 +96,9 @@ Partial Class ItemsByBelleAndJM
         '
         'ComboBox1
         '
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"ID", "Name", "Brand", "Size"})
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"ID", "Product Name", "Brand", "Size"})
         Me.ComboBox1.Location = New System.Drawing.Point(722, 79)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(215, 23)
@@ -105,7 +111,6 @@ Partial Class ItemsByBelleAndJM
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1904, 1041)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
@@ -115,6 +120,8 @@ Partial Class ItemsByBelleAndJM
         Me.DoubleBuffered = True
         Me.Name = "ItemsByBelleAndJM"
         Me.Text = "ItemsByBelleAndJM"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

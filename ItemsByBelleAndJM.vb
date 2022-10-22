@@ -1,13 +1,12 @@
-﻿Public Class ItemsByBelleAndJM
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+﻿Imports System.Data.SqlClient
 
-    End Sub
+Public Class ItemsByBelleAndJM
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If (ComboBox1.SelectedItem = "ID") Then
+            Dim cmd As New SqlCommand("select * from Items where ")
 
-    End Sub
-
-    Private Sub ItemsByBelleAndJM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        End If
     End Sub
 End Class
