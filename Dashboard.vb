@@ -3,7 +3,7 @@ Imports FontAwesome.Sharp
 
 
 Public Class Dashboard
-    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\db\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Public Shared dashboardmain
@@ -28,7 +28,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
-        changeMenu(ItemsByJM)
+        '  changeMenu(dashboardInventory)
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
