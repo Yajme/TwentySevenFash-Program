@@ -23,32 +23,44 @@ Partial Class dashboardSales
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(302, 290)
+        Me.Panel1.Size = New System.Drawing.Size(776, 290)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'Label4
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Total Expenses:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 145)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 15)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Profit:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 99)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(126, 15)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Number of Sold Shirts:"
         '
         'Label2
         '
@@ -59,23 +71,23 @@ Partial Class dashboardSales
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Total Sales:"
         '
-        'Label3
+        'Label1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 90)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(126, 15)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Number of Sold Shirts:"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(86, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Total Expenses:"
         '
-        'Label4
+        'DataGridView1
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 125)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 15)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Profit:"
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(198, 11)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 4
         '
         'dashboardSales
         '
@@ -87,6 +99,7 @@ Partial Class dashboardSales
         Me.Text = "dashboardSales"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -96,4 +109,5 @@ Partial Class dashboardSales
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
