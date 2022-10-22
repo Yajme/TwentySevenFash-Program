@@ -39,4 +39,19 @@ Public Class Dashboard
         lblDate.Text = DateString
         lblTime.Text = TimeString
     End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+        Dim confirmation As String = MsgBox("Are you sure to logout?", MsgBoxStyle.YesNo, "Logout confirmation")
+        If confirmation = vbYes Then
+            Me.Hide() 'hides dashboard form
+            Login.Show() ' shows login form
+        End If
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Dim confirmation As String = MsgBox("Are you sure to Exit?", MsgBoxStyle.YesNo, "Exit Confirmation")
+        If confirmation = vbYes Then
+            End 'ends program
+        End If
+    End Sub
 End Class

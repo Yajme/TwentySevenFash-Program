@@ -20,7 +20,7 @@ Public Class Login
         End If
 
         Try
-            con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\db\TwentySevenFash.mdf;Integrated Security=True")
+            con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
             con.Open()
             cmd = New SqlCommand("select * from users where username= @username and password= @password", con)
 
