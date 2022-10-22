@@ -40,47 +40,18 @@ Public Class Dashboard
         lblTime.Text = TimeString
     End Sub
 
-    Private Sub SidePanel_Paint(sender As Object, e As PaintEventArgs) Handles SidePanel.Paint
-
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
-    Private Sub lblDate_Click(sender As Object, e As EventArgs) Handles lblDate.Click
-
-    End Sub
-
-    Private Sub lblTime_Click(sender As Object, e As EventArgs) Handles lblTime.Click
-
-    End Sub
-
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
-
-    End Sub
-
-    Private Sub MENUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MENUToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
-
+        Dim confirmation As String = MsgBox("Are you sure to logout?", MsgBoxStyle.YesNo, "Logout confirmation")
+        If confirmation = vbYes Then
+            Me.Hide() 'hides dashboard form
+            Login.Show() ' shows login form
+        End If
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles PanelContainer.Paint
-
+        Dim confirmation As String = MsgBox("Are you sure to Exit?", MsgBoxStyle.YesNo, "Exit Confirmation")
+        If confirmation = vbYes Then
+            End 'ends program
+        End If
     End Sub
 End Class
