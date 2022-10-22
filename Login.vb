@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Transactions
 
 Public Class Login
-    Dim con As SqlConnection
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -20,7 +20,6 @@ Public Class Login
         End If
 
         Try
-            con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
             con.Open()
             cmd = New SqlCommand("select * from users where username= @username and password= @password", con)
 
