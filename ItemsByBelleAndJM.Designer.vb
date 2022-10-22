@@ -24,9 +24,9 @@ Partial Class ItemsByBelleAndJM
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ItemsByBelleAndJM))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -44,18 +44,6 @@ Partial Class ItemsByBelleAndJM
         Me.Panel1.Size = New System.Drawing.Size(974, 670)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Impact", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(288, 25)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 26)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Item Search"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -68,12 +56,24 @@ Partial Class ItemsByBelleAndJM
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Search:"
         '
-        'TextBox1
+        'Label1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(374, 79)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(342, 23)
-        Me.TextBox1.TabIndex = 2
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Impact", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(288, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(116, 26)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Item Search"
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(374, 79)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(342, 23)
+        Me.txtSearch.TabIndex = 2
         '
         'Button1
         '
@@ -114,7 +114,7 @@ Partial Class ItemsByBelleAndJM
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
@@ -130,7 +130,7 @@ Partial Class ItemsByBelleAndJM
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
