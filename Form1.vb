@@ -4,21 +4,21 @@
         Dim fn As String = txtFN.Text
         Dim ln As String = txtLN.Text
         Dim password As String = txtPass.Text
-        Dim mobile As Integer = Val(txtMN.Text)
-        Dim email As String = txtEA.Text
-        Dim birthday As String = txtBirth.Text
-        Dim gender As String = txtGender.Text
+        'im mobile As Integer = Val(txtMN.Text)
+        'Dim email As String = txtEA.Text
+        'Dim birthday As String = txtBirth.Text
+        'Dim gender As String = txtGender.Text
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
 
-        txtBirth.Text = String.Empty
-        txtEA.Text = String.Empty
+        ' txtBirth.Text = String.Empty
+        ' txtEA.Text = String.Empty
         txtFN.Text = String.Empty
-        txtGender.Text = String.Empty
+        ' txtGender.Text = String.Empty
         txtLN.Text = String.Empty
-        txtMN.Text = String.Empty
+        ' txtMN.Text = String.Empty
         txtPass.Text = String.Empty
 
 

@@ -25,11 +25,19 @@ Partial Class dashboardPOS
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.PanelTotalInvoice = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.PanelTotalInvoice.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(51, 32)
+        Me.TextBox1.Location = New System.Drawing.Point(40, 29)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(396, 27)
         Me.TextBox1.TabIndex = 0
@@ -39,7 +47,7 @@ Partial Class dashboardPOS
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(474, 24)
+        Me.IconButton1.Location = New System.Drawing.Point(463, 21)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(82, 43)
         Me.IconButton1.TabIndex = 1
@@ -50,20 +58,77 @@ Partial Class dashboardPOS
         '
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 98)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1025, 429)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(739, 429)
         Me.FlowLayoutPanel1.TabIndex = 2
+        '
+        'PanelTotalInvoice
+        '
+        Me.PanelTotalInvoice.Controls.Add(Me.lblTotal)
+        Me.PanelTotalInvoice.Location = New System.Drawing.Point(551, 3)
+        Me.PanelTotalInvoice.Name = "PanelTotalInvoice"
+        Me.PanelTotalInvoice.Size = New System.Drawing.Size(469, 89)
+        Me.PanelTotalInvoice.TabIndex = 3
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeight = 29
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ItemName, Me.Price})
+        Me.DataGridView1.Location = New System.Drawing.Point(745, 98)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(276, 425)
+        Me.DataGridView1.TabIndex = 4
+        '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ID.HeaderText = "#"
+        Me.ID.MinimumWidth = 6
+        Me.ID.Name = "ID"
+        '
+        'ItemName
+        '
+        Me.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ItemName.HeaderText = "ItemName"
+        Me.ItemName.MinimumWidth = 6
+        Me.ItemName.Name = "ItemName"
+        '
+        'Price
+        '
+        Me.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Price.HeaderText = "Price"
+        Me.Price.MinimumWidth = 6
+        Me.Price.Name = "Price"
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Tahoma", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblTotal.Location = New System.Drawing.Point(313, 18)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(130, 57)
+        Me.lblTotal.TabIndex = 0
+        Me.lblTotal.Text = "0.00"
         '
         'dashboardPOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1023, 528)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.PanelTotalInvoice)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "dashboardPOS"
         Me.Text = "dashboardPOS"
+        Me.PanelTotalInvoice.ResumeLayout(False)
+        Me.PanelTotalInvoice.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -72,4 +137,10 @@ Partial Class dashboardPOS
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents PanelTotalInvoice As Panel
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents ItemName As DataGridViewTextBoxColumn
+    Friend WithEvents Price As DataGridViewTextBoxColumn
 End Class
