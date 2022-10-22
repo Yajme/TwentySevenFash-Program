@@ -5,7 +5,9 @@ Public Class ItemsByBelleAndJM
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (ComboBox1.SelectedItem = "ID") Then
-            Dim cmd As New SqlCommand("select * from Items where ")
+            Dim cmd As New SqlCommand("select * from Items where ID", con)
+            con.Open()
+
 
         End If
     End Sub
