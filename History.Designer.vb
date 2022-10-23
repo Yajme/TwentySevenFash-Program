@@ -25,7 +25,7 @@ Partial Class History
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.productID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.productName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.productNamez = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.productQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.purchaseDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,7 +47,7 @@ Partial Class History
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.productID, Me.productName, Me.productQty, Me.price, Me.purchaseDate})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.productID, Me.productNamez, Me.productQty, Me.price, Me.purchaseDate})
         Me.DataGridView1.Location = New System.Drawing.Point(32, 120)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
@@ -61,8 +61,8 @@ Partial Class History
         '
         'productName
         '
-        Me.productName.HeaderText = "Product Name"
-        Me.productName.Name = "productName"
+        Me.productNamez.HeaderText = "Product Name"
+        Me.productNamez.Name = "productName"
         '
         'productQty
         '
@@ -115,7 +115,7 @@ Partial Class History
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents productID As DataGridViewTextBoxColumn
-    Friend WithEvents productName As DataGridViewTextBoxColumn
+    Friend WithEvents productNamez As DataGridViewTextBoxColumn
     Friend WithEvents productQty As DataGridViewTextBoxColumn
     Friend WithEvents price As DataGridViewTextBoxColumn
     Friend WithEvents purchaseDate As DataGridViewTextBoxColumn

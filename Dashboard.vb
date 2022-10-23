@@ -54,4 +54,16 @@ Public Class Dashboard
             End 'ends program
         End If
     End Sub
+
+    Private Sub PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles PanelContainer.Paint
+
+    End Sub
+
+    Private Sub lblTime_Click(sender As Object, e As EventArgs) Handles lblTime.Click
+
+    End Sub
+
+    Private Sub SidePanel_Paint(sender As Object, e As PaintEventArgs) Handles SidePanel.Paint
+
+    End Sub
 End Class
