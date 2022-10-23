@@ -77,7 +77,7 @@ Partial Class Dashboard
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Size = New System.Drawing.Size(245, 66)
         Me.btnHome.TabIndex = 0
-        Me.btnHome.Text = "Home"
+        Me.btnHome.Text = "Home."
         Me.btnHome.UseVisualStyleBackColor = False
         '
         'Panel2
