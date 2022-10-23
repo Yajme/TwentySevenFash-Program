@@ -59,4 +59,8 @@ Public Class Login
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
+
+    Private Sub Login_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        signup.Show()
+    End Sub
 End Class
