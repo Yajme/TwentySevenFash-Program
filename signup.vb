@@ -3,58 +3,33 @@ Imports System.Data.SqlClient
 
 
 Public Class signup
-    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash_log.mdf;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash_log_log.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
-        Dim fn As String = txtFN.Text
-        Dim ln As String = txtLN.Text
+        Dim fn As String = txtID.Text
+        Dim ln As String = txtType.Text
         Dim password As String = txtPass.Text
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim comm As String = "INSERT INTO Customers (username) VALUES (@FName, @LName, @UName, @Pass);"
+        Dim comm As New SqlCommand("INSERT INTO users (id, username, password, usertype) VALUES (@Id, @username, @type, @password)", con)
 
-        Dim insertCmd As New SqlCommand(comm, con)
-        insertCmd.Parameters.Add("@FName", SqlDbType.NVarChar, 50)
-        insertCmd.Parameters.Add("@LName", SqlDbType.NVarChar, 50)
-        insertCmd.Parameters.Add("@UName", SqlDbType.NVarChar, 50)
-        insertCmd.Parameters.Add("@Pass", SqlDbType.NVarChar, 50)
+        comm.Parameters.Add("@username", SqlDbType.VarChar).Value = txtUserN.Text
+        comm.Parameters.Add("@password", SqlDbType.VarChar).Value = txtPass.Text
+        comm.Parameters.Add("@type", SqlDbType.VarChar).Value = txtType.Text
+        comm.Parameters.Add("@Id", SqlDbType.VarChar).Value = txtID.Text
 
+        con.Open()
 
-
-        insertCmd.Parameters("@FName").Value = txtFN.Text
-        insertCmd.Parameters("@LName").Value = txtLN.Text
-        insertCmd.Parameters("@UName").Value = txtUserN.Text
-        insertCmd.Parameters("@Pass").Value = txtPass.Text
-
-
-        Dim bSuccess As Boolean
-        bSuccess = True
-
-        Try
-            con.Open()
-            insertCmd.ExecuteScalar()
-            con.Close()
-
-        Catch ex As Exception
-            bSuccess = False
-            MsgBox("Failed")
-        Finally
-            If con.State = ConnectionState.Open Then
-                con.Close()
-            End If
-        End Try
-
-        If bSuccess = True Then
-            MsgBox("Sucess")
+        If comm.ExecuteNonQuery() = 1 Then
+            MsgBox("Succcess")
+        Else
+            MsgBox("Error")
         End If
-
-
-
 
 
     End Sub
@@ -64,8 +39,8 @@ Public Class signup
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        txtFN.Text = ""
-        txtLN.Text = ""
+        txtID.Text = ""
+        txtType.Text = ""
         txtPass.Text = ""
         txtUserN.Text = ""
     End Sub

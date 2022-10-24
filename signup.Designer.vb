@@ -27,8 +27,8 @@ Partial Class signup
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtFN = New System.Windows.Forms.TextBox()
-        Me.txtLN = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.txtType = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtUserN = New System.Windows.Forms.TextBox()
@@ -59,9 +59,9 @@ Partial Class signup
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(162, 107)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 18)
+        Me.Label2.Size = New System.Drawing.Size(24, 18)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "First Name:"
+        Me.Label2.Text = "ID"
         '
         'Label3
         '
@@ -71,9 +71,9 @@ Partial Class signup
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(162, 136)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 18)
+        Me.Label3.Size = New System.Drawing.Size(85, 18)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Last Name:"
+        Me.Label3.Text = "User Type:"
         '
         'Label6
         '
@@ -87,22 +87,22 @@ Partial Class signup
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Username:"
         '
-        'txtFN
+        'txtID
         '
-        Me.txtFN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtFN.Location = New System.Drawing.Point(266, 108)
-        Me.txtFN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtFN.Name = "txtFN"
-        Me.txtFN.Size = New System.Drawing.Size(169, 20)
-        Me.txtFN.TabIndex = 8
+        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtID.Location = New System.Drawing.Point(266, 108)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(169, 20)
+        Me.txtID.TabIndex = 8
         '
-        'txtLN
+        'txtType
         '
-        Me.txtLN.Location = New System.Drawing.Point(266, 136)
-        Me.txtLN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtLN.Name = "txtLN"
-        Me.txtLN.Size = New System.Drawing.Size(169, 23)
-        Me.txtLN.TabIndex = 9
+        Me.txtType.Location = New System.Drawing.Point(266, 136)
+        Me.txtType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtType.Name = "txtType"
+        Me.txtType.Size = New System.Drawing.Size(169, 23)
+        Me.txtType.TabIndex = 9
         '
         'txtPass
         '
@@ -125,8 +125,8 @@ Partial Class signup
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtLN)
-        Me.GroupBox1.Controls.Add(Me.txtFN)
+        Me.GroupBox1.Controls.Add(Me.txtType)
+        Me.GroupBox1.Controls.Add(Me.txtID)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(525, 220)
@@ -225,8 +225,8 @@ Partial Class signup
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtFN As TextBox
-    Friend WithEvents txtLN As TextBox
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents txtType As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label9 As Label
