@@ -147,11 +147,11 @@ Partial Class salesRecords
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Cashier Name:"
         '
-        'History
+        'salesRecords
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 15!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"),System.Drawing.Image)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1023, 634)
         Me.Controls.Add(Me.Label4)
@@ -163,8 +163,8 @@ Partial Class salesRecords
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
-        Me.DoubleBuffered = true
-        Me.Name = "History"
+        Me.DoubleBuffered = True
+        Me.Name = "salesRecords"
         Me.Text = "Twenty Seven Fash | Sales Records"
         CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)

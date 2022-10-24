@@ -23,10 +23,10 @@ Partial Class dashboardSales
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,23 +41,14 @@ Partial Class dashboardSales
         Me.Panel1.Size = New System.Drawing.Size(302, 290)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'Label4
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Total Expenses:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 15)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Total Sales:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 125)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(72, 15)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Net Income:"
         '
         'Label3
         '
@@ -68,14 +59,23 @@ Partial Class dashboardSales
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Number of Sold Shirts:"
         '
-        'Label4
+        'Label2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 125)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 15)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Profit:"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 15)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Revenue:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(106, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Total Expenditures:"
         '
         'dashboardSales
         '
