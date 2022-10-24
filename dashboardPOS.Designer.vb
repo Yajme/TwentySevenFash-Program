@@ -26,11 +26,11 @@ Partial Class dashboardPOS
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.PanelTotalInvoice = New System.Windows.Forms.Panel()
+        Me.lblTotal = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblTotal = New System.Windows.Forms.Label()
         Me.PanelTotalInvoice.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class dashboardPOS
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(82, 43)
         Me.IconButton1.TabIndex = 1
-        Me.IconButton1.Text = "IconButton1"
+        Me.IconButton1.Text = "Enter"
         Me.IconButton1.UseVisualStyleBackColor = True
         '
         'FlowLayoutPanel1
@@ -68,6 +68,16 @@ Partial Class dashboardPOS
         Me.PanelTotalInvoice.Name = "PanelTotalInvoice"
         Me.PanelTotalInvoice.Size = New System.Drawing.Size(469, 89)
         Me.PanelTotalInvoice.TabIndex = 3
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Tahoma", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblTotal.Location = New System.Drawing.Point(313, 18)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(130, 57)
+        Me.lblTotal.TabIndex = 0
+        Me.lblTotal.Text = "0.00"
         '
         'DataGridView1
         '
@@ -102,16 +112,6 @@ Partial Class dashboardPOS
         Me.Price.HeaderText = "Price"
         Me.Price.MinimumWidth = 6
         Me.Price.Name = "Price"
-        '
-        'lblTotal
-        '
-        Me.lblTotal.AutoSize = True
-        Me.lblTotal.Font = New System.Drawing.Font("Tahoma", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblTotal.Location = New System.Drawing.Point(313, 18)
-        Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(130, 57)
-        Me.lblTotal.TabIndex = 0
-        Me.lblTotal.Text = "0.00"
         '
         'dashboardPOS
         '
