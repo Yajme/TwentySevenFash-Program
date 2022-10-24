@@ -62,4 +62,8 @@ Public Class Dashboard
     Private Sub lblTime_Click(sender As Object, e As EventArgs) Handles lblTime.Click
 
     End Sub
+
+    Private Sub SidePanel_Paint(sender As Object, e As PaintEventArgs) Handles SidePanel.Paint
+
+    End Sub
 End Class
