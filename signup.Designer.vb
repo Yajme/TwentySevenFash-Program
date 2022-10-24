@@ -27,15 +27,15 @@ Partial Class signup
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtFN = New System.Windows.Forms.TextBox()
-        Me.txtLN = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.txtType = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.btnLogin = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtUserN = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,9 +45,9 @@ Partial Class signup
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(304, 98)
+        Me.Label1.Location = New System.Drawing.Point(266, 74)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 28)
+        Me.Label1.Size = New System.Drawing.Size(68, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Sign Up"
         '
@@ -57,11 +57,11 @@ Partial Class signup
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(185, 143)
+        Me.Label2.Location = New System.Drawing.Point(162, 107)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 22)
+        Me.Label2.Size = New System.Drawing.Size(24, 18)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "First Name:"
+        Me.Label2.Text = "ID"
         '
         'Label3
         '
@@ -69,11 +69,11 @@ Partial Class signup
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(185, 182)
+        Me.Label3.Location = New System.Drawing.Point(162, 136)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(109, 22)
+        Me.Label3.Size = New System.Drawing.Size(85, 18)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Last Name:"
+        Me.Label3.Text = "User Type:"
         '
         'Label6
         '
@@ -81,83 +81,83 @@ Partial Class signup
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(185, 221)
+        Me.Label6.Location = New System.Drawing.Point(162, 166)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(104, 22)
+        Me.Label6.Size = New System.Drawing.Size(84, 18)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Username:"
         '
-        'txtFN
+        'txtID
         '
-        Me.txtFN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtFN.Location = New System.Drawing.Point(304, 144)
-        Me.txtFN.Name = "txtFN"
-        Me.txtFN.Size = New System.Drawing.Size(193, 23)
-        Me.txtFN.TabIndex = 8
+        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtID.Location = New System.Drawing.Point(266, 108)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(169, 20)
+        Me.txtID.TabIndex = 8
         '
-        'txtLN
+        'txtType
         '
-        Me.txtLN.Location = New System.Drawing.Point(304, 181)
-        Me.txtLN.Name = "txtLN"
-        Me.txtLN.Size = New System.Drawing.Size(193, 27)
-        Me.txtLN.TabIndex = 9
+        Me.txtType.Location = New System.Drawing.Point(266, 136)
+        Me.txtType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtType.Name = "txtType"
+        Me.txtType.Size = New System.Drawing.Size(169, 23)
+        Me.txtType.TabIndex = 9
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(904, 515)
+        Me.txtPass.Location = New System.Drawing.Point(265, 196)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(193, 27)
+        Me.txtPass.Size = New System.Drawing.Size(169, 23)
         Me.txtPass.TabIndex = 10
         '
         'GroupBox1
         '
         Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
         Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtPass)
+        Me.GroupBox1.Controls.Add(Me.txtUserN)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.btnLogin)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtLN)
-        Me.GroupBox1.Controls.Add(Me.txtFN)
+        Me.GroupBox1.Controls.Add(Me.txtType)
+        Me.GroupBox1.Controls.Add(Me.txtID)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(600, 293)
+        Me.GroupBox1.Location = New System.Drawing.Point(525, 220)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(702, 513)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(614, 385)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " "
         '
-        'Label9
+        'txtUserN
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Kristen ITC", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(185, 43)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(333, 45)
-        Me.Label9.TabIndex = 18
-        Me.Label9.Text = "Twenty Seven Fash"
+        Me.txtUserN.Location = New System.Drawing.Point(265, 166)
+        Me.txtUserN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtUserN.Name = "txtUserN"
+        Me.txtUserN.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtUserN.Size = New System.Drawing.Size(169, 23)
+        Me.txtUserN.TabIndex = 18
         '
-        'btnLogin
+        'Label4
         '
-        Me.btnLogin.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnLogin.BackgroundImage = CType(resources.GetObject("btnLogin.BackgroundImage"), System.Drawing.Image)
-        Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnLogin.ForeColor = System.Drawing.Color.DarkViolet
-        Me.btnLogin.Location = New System.Drawing.Point(364, 316)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(133, 43)
-        Me.btnLogin.TabIndex = 18
-        Me.btnLogin.Text = "CLEAR"
-        Me.btnLogin.UseVisualStyleBackColor = False
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(162, 196)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 18)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Password:"
         '
         'Button1
         '
@@ -167,49 +167,57 @@ Partial Class signup
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button1.ForeColor = System.Drawing.Color.DarkViolet
-        Me.Button1.Location = New System.Drawing.Point(220, 316)
+        Me.Button1.Location = New System.Drawing.Point(192, 237)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(133, 43)
+        Me.Button1.Size = New System.Drawing.Size(116, 32)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "SIGN UP"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Label4
+        'btnLogin
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(185, 262)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 22)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Password:"
+        Me.btnLogin.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnLogin.BackgroundImage = CType(resources.GetObject("btnLogin.BackgroundImage"), System.Drawing.Image)
+        Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnLogin.FlatAppearance.BorderSize = 0
+        Me.btnLogin.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnLogin.ForeColor = System.Drawing.Color.DarkViolet
+        Me.btnLogin.Location = New System.Drawing.Point(318, 237)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(116, 32)
+        Me.btnLogin.TabIndex = 18
+        Me.btnLogin.Text = "CLEAR"
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'Label9
         '
-        Me.TextBox1.Location = New System.Drawing.Point(304, 262)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(193, 27)
-        Me.TextBox1.TabIndex = 18
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Kristen ITC", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(162, 32)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(264, 36)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Twenty Seven Fash"
         '
-        'Form1
+        'signup
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1902, 1033)
-        Me.Controls.Add(Me.txtPass)
+        Me.ClientSize = New System.Drawing.Size(1199, 562)
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
-        Me.Name = "Form1"
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "signup"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -217,13 +225,13 @@ Partial Class signup
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtFN As TextBox
-    Friend WithEvents txtLN As TextBox
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents txtType As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtUserN As TextBox
 End Class
