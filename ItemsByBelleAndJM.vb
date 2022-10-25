@@ -7,7 +7,7 @@ Public Class ItemsByBelleAndJM
         If (ComboBox1.SelectedItem = "ID") Then
             Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
             con.Open()
-            cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = txtSearch.Text
+
 
         End If
     End Sub
