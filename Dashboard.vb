@@ -3,7 +3,7 @@ Imports FontAwesome.Sharp
 
 
 Public Class Dashboard
-    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users\spart\source\TwentySevenFash-Program\db\TwentySevenFash.mdf;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Public Shared dashboardmain
@@ -55,15 +55,9 @@ Public Class Dashboard
         End If
     End Sub
 
-    Private Sub PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles PanelContainer.Paint
 
-    End Sub
 
-    Private Sub lblTime_Click(sender As Object, e As EventArgs) Handles lblTime.Click
 
-    End Sub
 
-    Private Sub SidePanel_Paint(sender As Object, e As PaintEventArgs) Handles SidePanel.Paint
 
-    End Sub
 End Class

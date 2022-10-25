@@ -58,7 +58,7 @@ Partial Class dashboardPOS
         '
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 98)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(739, 429)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(739, 538)
         Me.FlowLayoutPanel1.TabIndex = 2
         '
         'PanelTotalInvoice
@@ -89,7 +89,7 @@ Partial Class dashboardPOS
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(276, 425)
+        Me.DataGridView1.Size = New System.Drawing.Size(296, 538)
         Me.DataGridView1.TabIndex = 4
         '
         'ID
@@ -117,7 +117,7 @@ Partial Class dashboardPOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1023, 528)
+        Me.ClientSize = New System.Drawing.Size(1053, 648)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PanelTotalInvoice)
         Me.Controls.Add(Me.FlowLayoutPanel1)

@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Transactions
 
 Public Class Login
-    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash_log.mdf;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -43,8 +43,9 @@ Public Class Login
             End If
             txtPassword.Text = ""
             txtUsername.Text = ""
+            con.Close()
         Catch ex As Exception
-
+            MsgBox("Error", MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
@@ -53,7 +54,5 @@ Public Class Login
     End Sub
 
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
-    End Sub
 End Class
