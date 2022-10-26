@@ -28,8 +28,8 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
-        '  changeMenu(dashboardInventory)
-        ItemsByBelleAndJM.Show()
+        changeMenu(dashboardInventory)
+        'ItemsByBelleAndJM.Show()
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load

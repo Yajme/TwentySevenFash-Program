@@ -31,6 +31,9 @@ Partial Class dashboardPOS
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.PanelTotalInvoice.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +50,7 @@ Partial Class dashboardPOS
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(463, 21)
+        Me.IconButton1.Location = New System.Drawing.Point(454, 21)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(82, 43)
         Me.IconButton1.TabIndex = 1
@@ -58,7 +61,7 @@ Partial Class dashboardPOS
         '
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 98)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(736, 538)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(736, 458)
         Me.FlowLayoutPanel1.TabIndex = 2
         '
         'PanelTotalInvoice
@@ -113,11 +116,50 @@ Partial Class dashboardPOS
         Me.Price.MinimumWidth = 6
         Me.Price.Name = "Price"
         '
+        'IconButton2
+        '
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.Location = New System.Drawing.Point(9, 567)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(117, 66)
+        Me.IconButton2.TabIndex = 5
+        Me.IconButton2.Text = "New Transaction"
+        Me.IconButton2.UseVisualStyleBackColor = True
+        '
+        'IconButton3
+        '
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton3.IconColor = System.Drawing.Color.Black
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.Location = New System.Drawing.Point(132, 567)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(117, 66)
+        Me.IconButton3.TabIndex = 6
+        Me.IconButton3.Text = "Void Item"
+        Me.IconButton3.UseVisualStyleBackColor = True
+        '
+        'IconButton4
+        '
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton4.IconColor = System.Drawing.Color.Black
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.Location = New System.Drawing.Point(255, 567)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(117, 66)
+        Me.IconButton4.TabIndex = 7
+        Me.IconButton4.Text = "Checkout"
+        Me.IconButton4.UseVisualStyleBackColor = True
+        '
         'dashboardPOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1053, 648)
+        Me.Controls.Add(Me.IconButton4)
+        Me.Controls.Add(Me.IconButton3)
+        Me.Controls.Add(Me.IconButton2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PanelTotalInvoice)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -143,4 +185,7 @@ Partial Class dashboardPOS
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents ItemName As DataGridViewTextBoxColumn
     Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
 End Class
