@@ -38,7 +38,6 @@ Public Class dashboardPOS
         Dim count As Integer = 0
 
         Do
-
             Dim newButton As Button
             newButton = New Button()
 

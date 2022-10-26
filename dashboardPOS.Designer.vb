@@ -56,9 +56,9 @@ Partial Class dashboardPOS
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 98)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 98)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(739, 538)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(736, 538)
         Me.FlowLayoutPanel1.TabIndex = 2
         '
         'PanelTotalInvoice
