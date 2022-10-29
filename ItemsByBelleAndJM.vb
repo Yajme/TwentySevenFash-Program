@@ -25,7 +25,7 @@ Public Class ItemsByBelleAndJM
                         DataGridView1.DataSource = dt
                     End Using
                 End Using
-                End Using
             End Using
+        End Using
     End Sub
 End Class
