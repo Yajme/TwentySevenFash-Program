@@ -22,6 +22,7 @@ Partial Class dashboardPOS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboardPOS))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
@@ -34,6 +35,7 @@ Partial Class dashboardPOS
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.PanelTotalInvoice.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -76,7 +78,7 @@ Partial Class dashboardPOS
         '
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Tahoma", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblTotal.Location = New System.Drawing.Point(313, 18)
+        Me.lblTotal.Location = New System.Drawing.Point(14, 18)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(130, 57)
         Me.lblTotal.TabIndex = 0
@@ -152,11 +154,29 @@ Partial Class dashboardPOS
         Me.IconButton4.Text = "Checkout"
         Me.IconButton4.UseVisualStyleBackColor = True
         '
+        'btnRefresh
+        '
+        Me.btnRefresh.BackColor = System.Drawing.Color.Transparent
+        Me.btnRefresh.BackgroundImage = CType(resources.GetObject("btnRefresh.BackgroundImage"), System.Drawing.Image)
+        Me.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnRefresh.FlatAppearance.BorderSize = 0
+        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRefresh.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnRefresh.IconColor = System.Drawing.Color.Black
+        Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnRefresh.Location = New System.Drawing.Point(696, 576)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(43, 49)
+        Me.btnRefresh.TabIndex = 8
+        Me.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRefresh.UseVisualStyleBackColor = False
+        '
         'dashboardPOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1053, 648)
+        Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.IconButton4)
         Me.Controls.Add(Me.IconButton3)
         Me.Controls.Add(Me.IconButton2)
@@ -188,4 +208,5 @@ Partial Class dashboardPOS
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
 End Class
