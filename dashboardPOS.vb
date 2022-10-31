@@ -10,6 +10,8 @@ Public Class dashboardPOS
     Dim dr As SqlDataReader
     Dim newButton As Button
     Dim total As Double
+    Public Shared dashboardmain
+    Public adminName As String = dashboardmain.ToString
     Dim lastRecord As Double
 
 
@@ -129,10 +131,31 @@ Public Class dashboardPOS
 
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
 
-        cmd = New SqlCommand("select * from users where username= @username and password= @password")
-        total -= lastRecord
-        lblTotal.Text = Format(total, "#,##.00")
-        DataGridView1.Rows.RemoveAt(DataGridView1.Rows.Count - 1)
+        If MsgBox("Void last Item?", vbYesNo + vbQuestion, "Confirmation") = vbYes Then
+            Try
+                Dim password As String = InputBox("Password:", "Verification")
+                con.Open()
+                cmd = New SqlCommand("select * from users where username= @username and password= @password", con)
+                cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = adminName.ToString
+                cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password.ToString
+                Dim sda As New SqlDataAdapter(cmd)
+                Dim table As New DataTable
+                sda.Fill(table)
+
+                If table.Rows.Count() <= 0 Then
+                    MsgBox("Password incorrect", MsgBoxStyle.OkOnly, "Wrong Password")
+                Else
+                    total -= lastRecord
+                    lblTotal.Text = Format(total, "#,##.00")
+                    DataGridView1.Rows.RemoveAt(DataGridView1.Rows.Count - 1)
+                End If
+                con.Close()
+            Catch ex As Exception
+                MsgBox("Database Error", MsgBoxStyle.Critical, "Error")
+            End Try
+
+        End If
+
 
     End Sub
 

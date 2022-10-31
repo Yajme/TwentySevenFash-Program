@@ -25,6 +25,7 @@ Public Class Dashboard
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
         changeMenu(dashboardPOS)
+
     End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
@@ -56,9 +57,7 @@ Public Class Dashboard
         End If
     End Sub
 
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
-
-
-
-
+    End Sub
 End Class
