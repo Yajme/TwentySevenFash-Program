@@ -162,4 +162,8 @@ Public Class dashboardPOS
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         LoadItems()
     End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
+    End Sub
 End Class
