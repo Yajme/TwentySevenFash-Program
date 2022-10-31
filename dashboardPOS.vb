@@ -46,7 +46,7 @@ Public Class dashboardPOS
         cmd = New SqlCommand("select * from items", con)
         dr = cmd.ExecuteReader
         Dim count As Integer
-
+        FlowLayoutPanel1.Controls.Clear()
         While dr.Read
             newButton = New Button()
 
@@ -107,6 +107,8 @@ Public Class dashboardPOS
         Dim transcID As Integer = rand.Next(1000, 9999)
         Dim confirmation As String = MsgBox("Checkout?", MsgBoxStyle.YesNo, "Confirmation")
         If confirmation = vbYes Then
+            Dim cash As Double = InputBox("Cash: ", "Cash")
+            Dim change As Double = cash - total
             Try
                 cmd = New SqlCommand("insert into Sales values(@ID,@Expenses,@Sales,@Profit,@Numberofsoldshirts)", con)
                 cmd.Parameters.AddWithValue("@ID", transcID)
@@ -120,9 +122,9 @@ Public Class dashboardPOS
                 cmd.ExecuteNonQuery()
                 con.Close()
 
-                MsgBox("Transaction Complete")
+                MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
             Catch ex As Exception
-                MsgBox("Database Error", MsgBoxStyle.Critical)
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
             End Try
         End If
 
@@ -151,7 +153,7 @@ Public Class dashboardPOS
                 End If
                 con.Close()
             Catch ex As Exception
-                MsgBox("Database Error", MsgBoxStyle.Critical, "Error")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
             End Try
 
         End If
@@ -163,7 +165,4 @@ Public Class dashboardPOS
         LoadItems()
     End Sub
 
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
-
-    End Sub
 End Class

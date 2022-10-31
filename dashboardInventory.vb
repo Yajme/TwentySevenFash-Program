@@ -51,8 +51,6 @@ Public Class dashboardInventory
         End If
 
 
-
-
     End Sub
 
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
@@ -70,7 +68,4 @@ Public Class dashboardInventory
         loaditems()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
 End Class

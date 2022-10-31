@@ -8,6 +8,7 @@ Public Class Dashboard
 
     Public Shared dashboardmain
     Private Sub changeMenu(frm As Form)
+
         PanelContainer.Controls.Clear()
         frm.TopMost = True
         frm.TopLevel = False
