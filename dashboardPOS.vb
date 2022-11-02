@@ -110,7 +110,8 @@ Public Class dashboardPOS
             Dim cash As Double = InputBox("Cash: ", "Cash")
             Dim change As Double = cash - total
             Try
-                cmd = New SqlCommand("insert into Sales values(@ID,@Expenses,@Sales,@Profit,@Numberofsoldshirts)", con)
+                cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Expenses,@Sales,@Profit,@Numberofsoldshirts)", con)
+                cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
                 cmd.Parameters.AddWithValue("@ID", transcID)
                 cmd.Parameters.AddWithValue("@Expenses", total.ToString)
                 cmd.Parameters.AddWithValue("@Sales", total)
@@ -124,6 +125,7 @@ Public Class dashboardPOS
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
             Catch ex As Exception
+                con.Close()
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
             End Try
         End If
@@ -164,5 +166,43 @@ Public Class dashboardPOS
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         LoadItems()
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+        If TextBox1.Text <> String.Empty Then
+            con.Open()
+            cmd = New SqlCommand("select * from items where id= @ID", con)
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
+            dr = cmd.ExecuteReader
+            Dim count As Integer
+            FlowLayoutPanel1.Controls.Clear()
+            While dr.Read
+                newButton = New Button()
+
+                With newButton
+                    .BackColor = Color.White
+                    .Size = New Size(162, 123)
+                    .Name = "btnItem" + count.ToString()
+                    .Tag = dr.Item("ID").ToString()
+                    .Text = dr.Item("ItemName").ToString()
+                End With
+
+                FlowLayoutPanel1.Controls.Add(newButton)
+
+                count += 1
+                AddHandler newButton.Click, AddressOf DynamicButton_click
+
+
+            End While
+            con.Close()
+        ElseIf TextBox1.Text = String.Empty Then
+            LoadItems()
+        End If
+
+
+
+    End Sub
+
+
 
 End Class

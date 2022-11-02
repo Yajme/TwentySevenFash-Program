@@ -60,7 +60,7 @@ Public Class inventoryAdd
                 MsgBox("Product Updated", MsgBoxStyle.OkOnly, "Product Update")
 
             Catch ex As Exception
-                MsgBox("Database error", MsgBoxStyle.Critical)
+                MsgBox("Database error " + ex.Message, MsgBoxStyle.Critical)
             End Try
         End If
     End Sub

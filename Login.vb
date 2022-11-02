@@ -46,7 +46,8 @@ Public Class Login
             txtUsername.Text = ""
             con.Close()
         Catch ex As Exception
-            MsgBox("Error", MsgBoxStyle.Critical, "Error")
+            con.Close()
+            MsgBox("Error " + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 

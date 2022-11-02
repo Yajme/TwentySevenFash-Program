@@ -52,7 +52,8 @@ Partial Class dashboardHome
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
+        Series1.Name = "Sales"
+        Series1.YValuesPerPoint = 4
         Me.Chart1.Series.Add(Series1)
         Me.Chart1.Size = New System.Drawing.Size(898, 398)
         Me.Chart1.TabIndex = 1
