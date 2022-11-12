@@ -8,6 +8,7 @@ Public Class Dashboard
 
     Public Shared dashboardmain
     Private Sub changeMenu(frm As Form)
+
         PanelContainer.Controls.Clear()
         frm.TopMost = True
         frm.TopLevel = False
@@ -25,6 +26,7 @@ Public Class Dashboard
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
         changeMenu(dashboardPOS)
+
     End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
@@ -55,10 +57,6 @@ Public Class Dashboard
             End 'ends program
         End If
     End Sub
-
-
-
-
 
 
 End Class

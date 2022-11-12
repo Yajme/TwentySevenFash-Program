@@ -22,6 +22,7 @@ Partial Class dashboardPOS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboardPOS))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
@@ -34,19 +35,26 @@ Partial Class dashboardPOS
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.PanelTotalInvoice.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
+        Me.TextBox1.Font = New System.Drawing.Font("Impact", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TextBox1.Location = New System.Drawing.Point(40, 29)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(396, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(396, 26)
         Me.TextBox1.TabIndex = 0
         '
         'IconButton1
         '
+        Me.IconButton1.BackColor = System.Drawing.Color.Transparent
+        Me.IconButton1.BackgroundImage = CType(resources.GetObject("IconButton1.BackgroundImage"), System.Drawing.Image)
+        Me.IconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton1.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -55,17 +63,20 @@ Partial Class dashboardPOS
         Me.IconButton1.Size = New System.Drawing.Size(82, 43)
         Me.IconButton1.TabIndex = 1
         Me.IconButton1.Text = "Enter"
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 98)
+        Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.BackgroundImage = CType(resources.GetObject("FlowLayoutPanel1.BackgroundImage"), System.Drawing.Image)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 99)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(736, 458)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(736, 459)
         Me.FlowLayoutPanel1.TabIndex = 2
         '
         'PanelTotalInvoice
         '
+        Me.PanelTotalInvoice.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PanelTotalInvoice.Controls.Add(Me.lblTotal)
         Me.PanelTotalInvoice.Location = New System.Drawing.Point(551, 3)
         Me.PanelTotalInvoice.Name = "PanelTotalInvoice"
@@ -76,7 +87,7 @@ Partial Class dashboardPOS
         '
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Tahoma", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblTotal.Location = New System.Drawing.Point(313, 18)
+        Me.lblTotal.Location = New System.Drawing.Point(14, 13)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(130, 57)
         Me.lblTotal.TabIndex = 0
@@ -84,15 +95,16 @@ Partial Class dashboardPOS
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeight = 29
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ItemName, Me.Price})
-        Me.DataGridView1.Location = New System.Drawing.Point(745, 98)
+        Me.DataGridView1.Location = New System.Drawing.Point(745, 99)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(296, 538)
+        Me.DataGridView1.Size = New System.Drawing.Size(296, 539)
         Me.DataGridView1.TabIndex = 4
         '
         'ID
@@ -118,45 +130,80 @@ Partial Class dashboardPOS
         '
         'IconButton2
         '
+        Me.IconButton2.BackColor = System.Drawing.Color.Transparent
+        Me.IconButton2.BackgroundImage = CType(resources.GetObject("IconButton2.BackgroundImage"), System.Drawing.Image)
+        Me.IconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton2.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton2.IconColor = System.Drawing.Color.Black
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.Location = New System.Drawing.Point(9, 567)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(117, 66)
+        Me.IconButton2.Size = New System.Drawing.Size(117, 67)
         Me.IconButton2.TabIndex = 5
         Me.IconButton2.Text = "New Transaction"
-        Me.IconButton2.UseVisualStyleBackColor = True
+        Me.IconButton2.UseVisualStyleBackColor = False
         '
         'IconButton3
         '
+        Me.IconButton3.BackColor = System.Drawing.Color.Transparent
+        Me.IconButton3.BackgroundImage = CType(resources.GetObject("IconButton3.BackgroundImage"), System.Drawing.Image)
+        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton3.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton3.IconColor = System.Drawing.Color.Black
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.Location = New System.Drawing.Point(132, 567)
+        Me.IconButton3.Location = New System.Drawing.Point(133, 567)
         Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(117, 66)
+        Me.IconButton3.Size = New System.Drawing.Size(117, 67)
         Me.IconButton3.TabIndex = 6
         Me.IconButton3.Text = "Void Item"
-        Me.IconButton3.UseVisualStyleBackColor = True
+        Me.IconButton3.UseVisualStyleBackColor = False
         '
         'IconButton4
         '
+        Me.IconButton4.BackColor = System.Drawing.Color.Transparent
+        Me.IconButton4.BackgroundImage = CType(resources.GetObject("IconButton4.BackgroundImage"), System.Drawing.Image)
+        Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton4.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton4.IconColor = System.Drawing.Color.Black
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.Location = New System.Drawing.Point(255, 567)
         Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(117, 66)
+        Me.IconButton4.Size = New System.Drawing.Size(117, 67)
         Me.IconButton4.TabIndex = 7
         Me.IconButton4.Text = "Checkout"
-        Me.IconButton4.UseVisualStyleBackColor = True
+        Me.IconButton4.UseVisualStyleBackColor = False
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.BackColor = System.Drawing.Color.Transparent
+        Me.btnRefresh.BackgroundImage = CType(resources.GetObject("btnRefresh.BackgroundImage"), System.Drawing.Image)
+        Me.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnRefresh.FlatAppearance.BorderSize = 0
+        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRefresh.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnRefresh.IconColor = System.Drawing.Color.Black
+        Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnRefresh.Location = New System.Drawing.Point(696, 576)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(43, 49)
+        Me.btnRefresh.TabIndex = 8
+        Me.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRefresh.UseVisualStyleBackColor = False
         '
         'dashboardPOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1053, 648)
+        Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.IconButton4)
         Me.Controls.Add(Me.IconButton3)
         Me.Controls.Add(Me.IconButton2)
@@ -165,6 +212,7 @@ Partial Class dashboardPOS
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.TextBox1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "dashboardPOS"
         Me.Text = "dashboardPOS"
@@ -188,4 +236,5 @@ Partial Class dashboardPOS
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
 End Class
