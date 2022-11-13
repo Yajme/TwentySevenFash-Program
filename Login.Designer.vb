@@ -22,6 +22,7 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -31,6 +32,7 @@ Partial Class Login
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,6 +142,9 @@ Partial Class Login
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Twenty Seven Fash"
         '
+        'Timer1
+        '
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -171,4 +176,5 @@ Partial Class Login
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Timer1 As Timer
 End Class

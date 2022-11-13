@@ -49,6 +49,10 @@ Public Class Login
                 Dashboard.Show()
                 Me.Hide()
 
+                Dim objj As New Dashboard
+                objj.wlcm = txtUsername.Text.ToUpper
+                objj.Show()
+
             End If
             txtPassword.Text = ""
             txtUsername.Text = ""
@@ -57,5 +61,8 @@ Public Class Login
             con.Close()
             MsgBox("Error " + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+
+
     End Sub
+
 End Class

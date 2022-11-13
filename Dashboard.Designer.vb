@@ -25,12 +25,17 @@ Partial Class Dashboard
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.SidePanel = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.loginName = New System.Windows.Forms.Label()
+        Me.wlcmLabel = New System.Windows.Forms.Label()
         Me.btnHome = New FontAwesome.Sharp.IconButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnInventory = New FontAwesome.Sharp.IconButton()
         Me.btnSales = New FontAwesome.Sharp.IconButton()
         Me.btnPOS = New FontAwesome.Sharp.IconButton()
         Me.PanelContainer = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
@@ -41,6 +46,8 @@ Partial Class Dashboard
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SidePanel.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.PanelContainer.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,6 +56,8 @@ Partial Class Dashboard
         Me.SidePanel.BackColor = System.Drawing.Color.Transparent
         Me.SidePanel.BackgroundImage = CType(resources.GetObject("SidePanel.BackgroundImage"), System.Drawing.Image)
         Me.SidePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SidePanel.Controls.Add(Me.Panel1)
+        Me.SidePanel.Controls.Add(Me.wlcmLabel)
         Me.SidePanel.Controls.Add(Me.btnHome)
         Me.SidePanel.Controls.Add(Me.Panel2)
         Me.SidePanel.Controls.Add(Me.btnInventory)
@@ -60,6 +69,39 @@ Partial Class Dashboard
         Me.SidePanel.Size = New System.Drawing.Size(255, 503)
         Me.SidePanel.TabIndex = 0
         '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.loginName)
+        Me.Panel1.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(256, 19)
+        Me.Panel1.TabIndex = 2
+        '
+        'loginName
+        '
+        Me.loginName.AutoSize = True
+        Me.loginName.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.loginName.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.loginName.Location = New System.Drawing.Point(23, 0)
+        Me.loginName.Name = "loginName"
+        Me.loginName.Size = New System.Drawing.Size(46, 17)
+        Me.loginName.TabIndex = 1
+        Me.loginName.Text = "OFFLINE"
+        '
+        'wlcmLabel
+        '
+        Me.wlcmLabel.AutoSize = True
+        Me.wlcmLabel.Font = New System.Drawing.Font("Cooper Black", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.wlcmLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.wlcmLabel.Location = New System.Drawing.Point(45, 39)
+        Me.wlcmLabel.Name = "wlcmLabel"
+        Me.wlcmLabel.Size = New System.Drawing.Size(161, 34)
+        Me.wlcmLabel.TabIndex = 4
+        Me.wlcmLabel.Text = "Welcome! "
+        Me.wlcmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'btnHome
         '
         Me.btnHome.BackColor = System.Drawing.Color.Transparent
@@ -69,16 +111,16 @@ Partial Class Dashboard
         Me.btnHome.FlatAppearance.BorderSize = 0
         Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnHome.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnHome.ForeColor = System.Drawing.Color.White
+        Me.btnHome.ForeColor = System.Drawing.Color.AliceBlue
         Me.btnHome.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnHome.IconColor = System.Drawing.Color.Black
         Me.btnHome.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnHome.Location = New System.Drawing.Point(-1, 8)
+        Me.btnHome.Location = New System.Drawing.Point(-2, 137)
         Me.btnHome.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Size = New System.Drawing.Size(245, 76)
         Me.btnHome.TabIndex = 0
-        Me.btnHome.Text = "Home."
+        Me.btnHome.Text = "Home"
         Me.btnHome.UseVisualStyleBackColor = False
         '
         'Panel2
@@ -101,7 +143,7 @@ Partial Class Dashboard
         Me.btnInventory.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnInventory.IconColor = System.Drawing.Color.Black
         Me.btnInventory.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnInventory.Location = New System.Drawing.Point(0, 248)
+        Me.btnInventory.Location = New System.Drawing.Point(-1, 377)
         Me.btnInventory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnInventory.Name = "btnInventory"
         Me.btnInventory.Size = New System.Drawing.Size(245, 76)
@@ -121,7 +163,7 @@ Partial Class Dashboard
         Me.btnSales.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnSales.IconColor = System.Drawing.Color.Black
         Me.btnSales.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSales.Location = New System.Drawing.Point(0, 168)
+        Me.btnSales.Location = New System.Drawing.Point(-1, 297)
         Me.btnSales.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSales.Name = "btnSales"
         Me.btnSales.Size = New System.Drawing.Size(243, 76)
@@ -141,7 +183,7 @@ Partial Class Dashboard
         Me.btnPOS.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnPOS.IconColor = System.Drawing.Color.Black
         Me.btnPOS.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPOS.Location = New System.Drawing.Point(-1, 88)
+        Me.btnPOS.Location = New System.Drawing.Point(-2, 217)
         Me.btnPOS.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnPOS.Name = "btnPOS"
         Me.btnPOS.Size = New System.Drawing.Size(245, 76)
@@ -154,11 +196,31 @@ Partial Class Dashboard
         Me.PanelContainer.BackColor = System.Drawing.Color.Black
         Me.PanelContainer.BackgroundImage = CType(resources.GetObject("PanelContainer.BackgroundImage"), System.Drawing.Image)
         Me.PanelContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelContainer.Controls.Add(Me.Label3)
+        Me.PanelContainer.Controls.Add(Me.Label1)
         Me.PanelContainer.Location = New System.Drawing.Point(262, 52)
         Me.PanelContainer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelContainer.Name = "PanelContainer"
         Me.PanelContainer.Size = New System.Drawing.Size(910, 486)
         Me.PanelContainer.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(-152, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(41, 15)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Label3"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(634, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Label1"
         '
         'Timer1
         '
@@ -167,20 +229,22 @@ Partial Class Dashboard
         'lblDate
         '
         Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Impact", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblDate.Location = New System.Drawing.Point(1030, 35)
+        Me.lblDate.Location = New System.Drawing.Point(1032, 29)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(83, 15)
+        Me.lblDate.Size = New System.Drawing.Size(83, 19)
         Me.lblDate.TabIndex = 2
         Me.lblDate.Text = "MM/DD/YYYY"
         '
         'lblTime
         '
         Me.lblTime.AutoSize = True
+        Me.lblTime.Font = New System.Drawing.Font("Impact", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblTime.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblTime.Location = New System.Drawing.Point(975, 35)
+        Me.lblTime.Location = New System.Drawing.Point(962, 30)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(49, 15)
+        Me.lblTime.Size = New System.Drawing.Size(63, 19)
         Me.lblTime.TabIndex = 3
         Me.lblTime.Text = "00:00:00"
         '
@@ -248,6 +312,11 @@ Partial Class Dashboard
         Me.Name = "Dashboard"
         Me.Text = "Dashboard"
         Me.SidePanel.ResumeLayout(False)
+        Me.SidePanel.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.PanelContainer.ResumeLayout(False)
+        Me.PanelContainer.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -271,4 +340,10 @@ Partial Class Dashboard
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents wlcmLabel As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents loginName As Label
 End Class
