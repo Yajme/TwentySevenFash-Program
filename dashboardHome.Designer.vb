@@ -28,6 +28,7 @@ Partial Class dashboardHome
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboardHome))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Chart1 = New FastReport.DataVisualization.Charting.Chart()
+        Me.lblDate = New System.Windows.Forms.Label()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,7 +37,7 @@ Partial Class dashboardHome
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(43, 37)
+        Me.Label1.Location = New System.Drawing.Point(32, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(69, 29)
         Me.Label1.TabIndex = 0
@@ -44,6 +45,7 @@ Partial Class dashboardHome
         '
         'Chart1
         '
+        ChartArea1.Area3DStyle.Enable3D = True
         ChartArea1.Name = "ChartArea1"
         Me.Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
@@ -59,6 +61,17 @@ Partial Class dashboardHome
         Me.Chart1.TabIndex = 1
         Me.Chart1.Text = "Chart1"
         '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.BackColor = System.Drawing.Color.Transparent
+        Me.lblDate.Font = New System.Drawing.Font("Impact", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblDate.Location = New System.Drawing.Point(62, 70)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(248, 28)
+        Me.lblDate.TabIndex = 2
+        Me.lblDate.Text = "Saturday, January 1, 2000"
+        '
         'dashboardHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -66,6 +79,7 @@ Partial Class dashboardHome
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1041, 575)
+        Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
@@ -80,4 +94,5 @@ Partial Class dashboardHome
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Chart1 As FastReport.DataVisualization.Charting.Chart
+    Friend WithEvents lblDate As Label
 End Class

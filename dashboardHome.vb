@@ -8,10 +8,16 @@ Public Class dashboardHome
 
 
     Private Sub dashboardHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         LoadChart()
     End Sub
 
+    Private Sub TodayDate()
 
+
+
+
+    End Sub
     Private Sub LoadChart()
         Try
             con.Open()
