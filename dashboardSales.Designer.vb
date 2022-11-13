@@ -33,6 +33,7 @@ Partial Class dashboardSales
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -40,6 +41,7 @@ Partial Class dashboardSales
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(302, 290)
@@ -63,9 +65,9 @@ Partial Class dashboardSales
         Me.Label3.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(16, 90)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 17)
+        Me.Label3.Size = New System.Drawing.Size(127, 17)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Number of Sold Shirts:"
+        Me.Label3.Text = "Number of Sold Items:"
         '
         'Label2
         '
