@@ -6,8 +6,16 @@ Public Class Login
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs)
 
+
+    End Sub
+
+    Private Sub lblForgotPwd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+
+    End Sub
+
+    Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         If txtUsername.Text = "" Then
             MsgBox("Enter Username")
@@ -50,11 +58,4 @@ Public Class Login
             MsgBox("Error " + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
-
-    Private Sub lblForgotPwd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPwd.LinkClicked
-
-    End Sub
-
-
-
 End Class
