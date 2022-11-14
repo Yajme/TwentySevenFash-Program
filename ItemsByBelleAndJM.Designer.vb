@@ -92,7 +92,7 @@ Partial Class ItemsByBelleAndJM
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(950, 557)
+        Me.DataGridView1.Size = New System.Drawing.Size(899, 442)
         Me.DataGridView1.TabIndex = 1
         '
         'ComboBox1
