@@ -45,6 +45,7 @@ Partial Class Dashboard
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SidePanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PanelContainer.SuspendLayout()
@@ -265,7 +266,7 @@ Partial Class Dashboard
         '
         'MENUToolStripMenuItem
         '
-        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.HistoryToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MENUToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.MENUToolStripMenuItem.Name = "MENUToolStripMenuItem"
         Me.MENUToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
@@ -294,6 +295,12 @@ Partial Class Dashboard
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'HistoryToolStripMenuItem
+        '
+        Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
+        Me.HistoryToolStripMenuItem.Text = "History"
         '
         'Dashboard
         '
@@ -346,4 +353,5 @@ Partial Class Dashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents loginName As Label
+    Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
 End Class
