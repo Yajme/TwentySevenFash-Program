@@ -31,11 +31,12 @@ Partial Class Login
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -43,13 +44,13 @@ Partial Class Login
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.PictureBox3)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.lblForgotPwd)
         Me.Panel1.Controls.Add(Me.btnLogin)
         Me.Panel1.Controls.Add(Me.txtPassword)
         Me.Panel1.Controls.Add(Me.txtUsername)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(146, 49)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(394, 249)
@@ -87,7 +88,7 @@ Partial Class Login
         Me.lblForgotPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblForgotPwd.ForeColor = System.Drawing.Color.White
         Me.lblForgotPwd.LinkColor = System.Drawing.Color.White
-        Me.lblForgotPwd.Location = New System.Drawing.Point(186, 159)
+        Me.lblForgotPwd.Location = New System.Drawing.Point(206, 159)
         Me.lblForgotPwd.Name = "lblForgotPwd"
         Me.lblForgotPwd.Size = New System.Drawing.Size(122, 15)
         Me.lblForgotPwd.TabIndex = 13
@@ -130,20 +131,15 @@ Partial Class Login
         Me.txtUsername.Size = New System.Drawing.Size(225, 22)
         Me.txtUsername.TabIndex = 10
         '
-        'Label1
+        'PictureBox3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(75, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(255, 31)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Twenty Seven Fash"
-        '
-        'Timer1
-        '
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(50, 15)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(295, 58)
+        Me.PictureBox3.TabIndex = 16
+        Me.PictureBox3.TabStop = False
         '
         'Login
         '
@@ -163,13 +159,13 @@ Partial Class Login
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblForgotPwd As LinkLabel
     Friend WithEvents btnLogin As Button
@@ -177,4 +173,5 @@ Partial Class Login
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
