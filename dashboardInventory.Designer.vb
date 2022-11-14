@@ -35,6 +35,7 @@ Partial Class dashboardInventory
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnSearch = New FontAwesome.Sharp.IconButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,15 +53,14 @@ Partial Class dashboardInventory
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ItemName, Me.Brand, Me.Size, Me.Color, Me.Price, Me.colEdit, Me.ColDelete})
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 69)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 92)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(885, 373)
+        Me.DataGridView1.Size = New System.Drawing.Size(1011, 497)
         Me.DataGridView1.TabIndex = 0
         '
         'ID
@@ -141,10 +141,9 @@ Partial Class dashboardInventory
         Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton3.IconColor = System.Drawing.Color.Black
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.Location = New System.Drawing.Point(835, 24)
-        Me.IconButton3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconButton3.Location = New System.Drawing.Point(954, 32)
         Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(51, 37)
+        Me.IconButton3.Size = New System.Drawing.Size(58, 49)
         Me.IconButton3.TabIndex = 3
         Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton3.UseVisualStyleBackColor = False
@@ -159,10 +158,9 @@ Partial Class dashboardInventory
         Me.btnRefresh.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnRefresh.IconColor = System.Drawing.Color.Black
         Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnRefresh.Location = New System.Drawing.Point(793, 24)
-        Me.btnRefresh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnRefresh.Location = New System.Drawing.Point(906, 32)
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(38, 37)
+        Me.btnRefresh.Size = New System.Drawing.Size(43, 49)
         Me.btnRefresh.TabIndex = 4
         Me.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnRefresh.UseVisualStyleBackColor = False
@@ -173,26 +171,41 @@ Partial Class dashboardInventory
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(44, 22)
+        Me.Label1.Location = New System.Drawing.Point(50, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 36)
+        Me.Label1.Size = New System.Drawing.Size(165, 45)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Inventory"
         '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.Transparent
+        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnSearch.IconColor = System.Drawing.Color.Black
+        Me.btnSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSearch.Location = New System.Drawing.Point(826, 32)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(74, 48)
+        Me.btnSearch.TabIndex = 6
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
         'dashboardInventory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(906, 451)
+        Me.ClientSize = New System.Drawing.Size(1035, 601)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.IconButton3)
         Me.Controls.Add(Me.DataGridView1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "dashboardInventory"
         Me.Text = "dashboardInventory"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -213,4 +226,5 @@ Partial Class dashboardInventory
     Friend WithEvents ColDelete As DataGridViewImageColumn
     Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnSearch As FontAwesome.Sharp.IconButton
 End Class
