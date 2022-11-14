@@ -40,8 +40,8 @@ Public Class Dashboard
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         changeMenu(dashboardHome)
 
-        wlcmLabel.Text = "Welcome! " & vbNewLine & wlcm
-        loginName.Text = wlcm
+        wlcmLabel.Text = "Welcome! " & vbNewLine & dashboardmain
+        loginName.Text = dashboardmain
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -77,6 +77,6 @@ Public Class Dashboard
     End Sub
 
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
-
+        salesRecords.Show()
     End Sub
 End Class

@@ -44,14 +44,12 @@ Public Class Login
             End If
             If table.Rows(0)("USERTYPE") = "admin" Then
                 Dim dashboardmain As New Dashboard
-                Dashboard.dashboardmain = txtUsername.Text
+                Dashboard.dashboardmain = txtUsername.Text.ToUpper
                 dashboardPOS.dashboardmain = txtUsername.Text
                 Dashboard.Show()
                 Me.Hide()
 
-                Dim objj As New Dashboard
-                objj.wlcm = txtUsername.Text.ToUpper
-                objj.Show()
+
 
             End If
             txtPassword.Text = ""
