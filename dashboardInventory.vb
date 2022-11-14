@@ -69,6 +69,6 @@ Public Class dashboardInventory
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        ItemsByBelleAndJM.Show()
+        itemSearch.Show()
     End Sub
 End Class

@@ -79,4 +79,8 @@ Public Class Dashboard
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
         salesRecords.Show()
     End Sub
+
+    Private Sub SignUpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SignUpToolStripMenuItem.Click
+        signup.Show()
+    End Sub
 End Class

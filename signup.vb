@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 
 Public Class signup
-    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash_log_log.mdf;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -45,7 +45,7 @@ Public Class signup
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim comm As New SqlCommand("INSERT INTO users (id, username, password, usertype) VALUES (@Id, @username, @type, @password)", con)
+        Dim comm As New SqlCommand("INSERT INTO users (id, username, password, usertype) VALUES (@Id, @username,  @password, @type)", con)
 
         comm.Parameters.Add("@username", SqlDbType.VarChar).Value = txtUserN.Text
         comm.Parameters.Add("@password", SqlDbType.VarChar).Value = txtPass.Text
