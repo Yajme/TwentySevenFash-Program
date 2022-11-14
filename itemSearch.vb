@@ -6,7 +6,7 @@ Public Class itemSearch
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (ComboBox1.Text = "ID") Then
             Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
-            Dim cmd2 As New SqlCommand("select * from Items Id like'" + txtSearch.Text + "'", con)
+            Dim cmd2 As New SqlCommand("select * from Items where Id = '" + txtSearch.Text + "'", con)
             con.Open()
             Dim sda As New SqlDataAdapter(cmd2)
             Dim ds As New DataSet()
@@ -15,7 +15,7 @@ Public Class itemSearch
             con.Close()
         ElseIf (ComboBox1.Text = "Product Name") Then
             Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
-            Dim cmd2 As New SqlCommand("select * from Items ItemName like'" + txtSearch.Text + "'", con)
+            Dim cmd2 As New SqlCommand("select * from Items where ItemName = '" + txtSearch.Text + "'", con)
             con.Open()
             Dim sda As New SqlDataAdapter(cmd2)
             Dim ds As New DataSet()
@@ -24,7 +24,7 @@ Public Class itemSearch
             con.Close()
         ElseIf (ComboBox1.Text = "Brand") Then
             Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
-            Dim cmd2 As New SqlCommand("select * from Items Brand like'" + txtSearch.Text + "'", con)
+            Dim cmd2 As New SqlCommand("select * from Items where Brand ='" + txtSearch.Text + "'", con)
             con.Open()
             Dim sda As New SqlDataAdapter(cmd2)
             Dim ds As New DataSet()
@@ -33,7 +33,7 @@ Public Class itemSearch
             con.Close()
         ElseIf (ComboBox1.Text = "Size") Then
             Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
-            Dim cmd2 As New SqlCommand("select * from Items Size like'" + txtSearch.Text + "'", con)
+            Dim cmd2 As New SqlCommand("select * from Items where Size = '" + txtSearch.Text + "'", con)
             con.Open()
             Dim sda As New SqlDataAdapter(cmd2)
             Dim ds As New DataSet()
