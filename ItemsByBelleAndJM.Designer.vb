@@ -28,10 +28,10 @@ Partial Class ItemsByBelleAndJM
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvItems = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -84,16 +84,16 @@ Partial Class ItemsByBelleAndJM
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvItems
         '
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(288, 108)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(899, 442)
-        Me.DataGridView1.TabIndex = 1
+        Me.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvItems.Location = New System.Drawing.Point(288, 108)
+        Me.dgvItems.Name = "dgvItems"
+        Me.dgvItems.RowHeadersWidth = 51
+        Me.dgvItems.RowTemplate.Height = 25
+        Me.dgvItems.Size = New System.Drawing.Size(899, 442)
+        Me.dgvItems.TabIndex = 1
         '
         'ComboBox1
         '
@@ -116,14 +116,14 @@ Partial Class ItemsByBelleAndJM
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.txtSearch)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvItems)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
         Me.Name = "ItemsByBelleAndJM"
         Me.Text = "ItemsByBelleAndJM"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -134,6 +134,6 @@ Partial Class ItemsByBelleAndJM
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvItems As DataGridView
     Friend WithEvents ComboBox1 As ComboBox
 End Class
