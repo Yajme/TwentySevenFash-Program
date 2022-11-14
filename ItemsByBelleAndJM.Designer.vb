@@ -28,10 +28,10 @@ Partial Class ItemsByBelleAndJM
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvItems = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -39,10 +39,9 @@ Partial Class ItemsByBelleAndJM
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(318, 16)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel1.Location = New System.Drawing.Point(278, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1113, 893)
+        Me.Panel1.Size = New System.Drawing.Size(974, 670)
         Me.Panel1.TabIndex = 0
         '
         'Label2
@@ -51,9 +50,9 @@ Partial Class ItemsByBelleAndJM
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(11, 89)
+        Me.Label2.Location = New System.Drawing.Point(10, 67)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 25)
+        Me.Label2.Size = New System.Drawing.Size(59, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Search:"
         '
@@ -63,73 +62,68 @@ Partial Class ItemsByBelleAndJM
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(329, 33)
+        Me.Label1.Location = New System.Drawing.Point(288, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 34)
+        Me.Label1.Size = New System.Drawing.Size(116, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Item Search"
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(427, 105)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtSearch.Location = New System.Drawing.Point(374, 79)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(390, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(342, 23)
         Me.txtSearch.TabIndex = 2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1078, 105)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Location = New System.Drawing.Point(943, 79)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 31)
+        Me.Button1.Size = New System.Drawing.Size(126, 23)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvItems
         '
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(329, 144)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(1086, 743)
-        Me.DataGridView1.TabIndex = 1
+        Me.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvItems.Location = New System.Drawing.Point(288, 108)
+        Me.dgvItems.Name = "dgvItems"
+        Me.dgvItems.RowHeadersWidth = 51
+        Me.dgvItems.RowTemplate.Height = 25
+        Me.dgvItems.Size = New System.Drawing.Size(950, 557)
+        Me.dgvItems.TabIndex = 1
         '
         'ComboBox1
         '
         Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"ID", "Name", "Brand", "Size"})
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"ID", "Product Name", "Brand", "Size"})
-        Me.ComboBox1.Location = New System.Drawing.Point(825, 105)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ComboBox1.Location = New System.Drawing.Point(722, 79)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(245, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(215, 23)
         Me.ComboBox1.TabIndex = 2
         '
         'ItemsByBelleAndJM
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.ClientSize = New System.Drawing.Size(1684, 791)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.txtSearch)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvItems)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "ItemsByBelleAndJM"
         Me.Text = "ItemsByBelleAndJM"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -140,6 +134,6 @@ Partial Class ItemsByBelleAndJM
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvItems As DataGridView
     Friend WithEvents ComboBox1 As ComboBox
 End Class

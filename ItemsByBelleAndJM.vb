@@ -4,10 +4,42 @@ Public Class ItemsByBelleAndJM
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As New SqlCommand("select * from items")
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If (ComboBox1.SelectedItem = "ID") Then
+        If (ComboBox1.Text = "ID") Then
             Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
+            Dim cmd2 As New SqlCommand("select * from Items Id like'" + txtSearch.Text + "'", con)
             con.Open()
-
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            dgvItems.DataSource = ds.Tables(0)
+            con.Close()
+        ElseIf (ComboBox1.Text = "Product Name") Then
+            Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
+            Dim cmd2 As New SqlCommand("select * from Items ItemName like'" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            dgvItems.DataSource = ds.Tables(0)
+            con.Close()
+        ElseIf (ComboBox1.Text = "Brand") Then
+            Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
+            Dim cmd2 As New SqlCommand("select * from Items Brand like'" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            dgvItems.DataSource = ds.Tables(0)
+            con.Close()
+        ElseIf (ComboBox1.Text = "Size") Then
+            Dim cmd As New SqlCommand("select * from Items where ID = @id", con)
+            Dim cmd2 As New SqlCommand("select * from Items Size like'" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            dgvItems.DataSource = ds.Tables(0)
+            con.Close()
 
         End If
     End Sub
@@ -22,7 +54,7 @@ Public Class ItemsByBelleAndJM
                     sda.SelectCommand = cmd
                     Using dt As New DataTable()
                         sda.Fill(dt)
-                        DataGridView1.DataSource = dt
+                        dgvItems.DataSource = dt
                     End Using
                 End Using
             End Using
