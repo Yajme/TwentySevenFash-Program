@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class ItemsByBelleAndJM
+Public Class itemSearch
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As New SqlCommand("select * from items")
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
