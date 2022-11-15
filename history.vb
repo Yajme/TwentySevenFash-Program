@@ -61,4 +61,11 @@ Public Class History
         End Using
     End Sub
 
+    Private Sub dgvHistory_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvHistory.CellContentClick
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        BindData()
+    End Sub
 End Class

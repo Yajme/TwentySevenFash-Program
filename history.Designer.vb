@@ -38,6 +38,7 @@ Partial Class History
         Me.lblExpenses = New System.Windows.Forms.Label()
         Me.lblRevenue = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgvHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -227,6 +228,15 @@ Partial Class History
         Me.lblDate.Size = New System.Drawing.Size(0, 32)
         Me.lblDate.TabIndex = 20
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(458, 110)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(113, 23)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Load All"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'History
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -234,6 +244,7 @@ Partial Class History
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1035, 588)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dtpDate)
@@ -266,4 +277,5 @@ End Sub
     Friend WithEvents lblExpenses As Label
     Friend WithEvents lblRevenue As Label
     Friend WithEvents lblDate As Label
+    Friend WithEvents Button1 As Button
 End Class
