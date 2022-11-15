@@ -74,7 +74,7 @@ Public Class dashboardHome
             Dim count_control As Integer = table.Rows.Count()
             While count < count_control
 
-                Me.Chart1.Series("Sales").Points.AddXY(table.Rows(count)("dateoftransaction").ToString, table.Rows(count)("sales").ToString)
+                Me.Chart1.Series("Sales").Points.AddXY(table.Rows(count)("dateoftransaction").ToString, table.Rows(count)("revenue").ToString)
 
                 count += 1
             End While

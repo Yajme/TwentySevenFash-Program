@@ -64,18 +64,6 @@ Public Class Dashboard
         End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles wlcmLabel.Click
-
-    End Sub
-
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
-
-    End Sub
-
-    Private Sub MENUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MENUToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
         History.Show()
     End Sub

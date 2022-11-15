@@ -110,13 +110,13 @@ Public Class dashboardPOS
             Dim cash As Double = InputBox("Cash: ", "Cash")
             Dim change As Double = cash - total
             Try
-                cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Expenses,@Sales,@Profit,@Numberofsoldshirts)", con)
+                cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Revenue,@Expenses,@Profit,@SoldItems)", con)
                 cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
                 cmd.Parameters.AddWithValue("@ID", transcID)
+                cmd.Parameters.AddWithValue("@Revenue", total)
                 cmd.Parameters.AddWithValue("@Expenses", total.ToString)
-                cmd.Parameters.AddWithValue("@Sales", total)
                 cmd.Parameters.AddWithValue("@Profit", total)
-                cmd.Parameters.AddWithValue("@Numberofsoldshirts", DataGridView1.Rows.Count.ToString)
+                cmd.Parameters.AddWithValue("@SoldItems", DataGridView1.Rows.Count.ToString)
 
 
                 con.Open()
