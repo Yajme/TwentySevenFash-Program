@@ -105,7 +105,7 @@ Partial Class itemSearch
         Me.ComboBox1.Size = New System.Drawing.Size(215, 23)
         Me.ComboBox1.TabIndex = 2
         '
-        'ItemsByBelleAndJM
+        'itemSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -119,8 +119,8 @@ Partial Class itemSearch
         Me.Controls.Add(Me.dgvItems)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
-        Me.Name = "ItemsByBelleAndJM"
-        Me.Text = "ItemsByBelleAndJM"
+        Me.Name = "itemSearch"
+        Me.Text = "Item Search"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).EndInit()
