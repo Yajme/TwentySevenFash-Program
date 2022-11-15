@@ -24,17 +24,17 @@ Partial Class dashboardSales
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboardSales))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.rvnLabel = New System.Windows.Forms.Label()
+        Me.sldLabel = New System.Windows.Forms.Label()
+        Me.ntcmLabel = New System.Windows.Forms.Label()
+        Me.expdLabel = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.expdLabel = New System.Windows.Forms.Label()
-        Me.ntcmLabel = New System.Windows.Forms.Label()
-        Me.rvnLabel = New System.Windows.Forms.Label()
-        Me.sldLabel = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -58,6 +58,50 @@ Partial Class dashboardSales
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(574, 377)
         Me.Panel1.TabIndex = 0
+        '
+        'rvnLabel
+        '
+        Me.rvnLabel.AutoSize = True
+        Me.rvnLabel.BackColor = System.Drawing.Color.Transparent
+        Me.rvnLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.rvnLabel.Location = New System.Drawing.Point(59, 129)
+        Me.rvnLabel.Name = "rvnLabel"
+        Me.rvnLabel.Size = New System.Drawing.Size(118, 31)
+        Me.rvnLabel.TabIndex = 5
+        Me.rvnLabel.Text = "rvnLabel"
+        '
+        'sldLabel
+        '
+        Me.sldLabel.AutoSize = True
+        Me.sldLabel.BackColor = System.Drawing.Color.Transparent
+        Me.sldLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.sldLabel.Location = New System.Drawing.Point(59, 217)
+        Me.sldLabel.Name = "sldLabel"
+        Me.sldLabel.Size = New System.Drawing.Size(115, 31)
+        Me.sldLabel.TabIndex = 5
+        Me.sldLabel.Text = "sldLabel"
+        '
+        'ntcmLabel
+        '
+        Me.ntcmLabel.AutoSize = True
+        Me.ntcmLabel.BackColor = System.Drawing.Color.Transparent
+        Me.ntcmLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ntcmLabel.Location = New System.Drawing.Point(59, 312)
+        Me.ntcmLabel.Name = "ntcmLabel"
+        Me.ntcmLabel.Size = New System.Drawing.Size(139, 31)
+        Me.ntcmLabel.TabIndex = 5
+        Me.ntcmLabel.Text = "ntcmLabel"
+        '
+        'expdLabel
+        '
+        Me.expdLabel.AutoSize = True
+        Me.expdLabel.BackColor = System.Drawing.Color.Transparent
+        Me.expdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.expdLabel.Location = New System.Drawing.Point(59, 44)
+        Me.expdLabel.Name = "expdLabel"
+        Me.expdLabel.Size = New System.Drawing.Size(138, 31)
+        Me.expdLabel.TabIndex = 4
+        Me.expdLabel.Text = "expdLabel"
         '
         'Label4
         '
@@ -117,6 +161,19 @@ Partial Class dashboardSales
         Me.Panel2.Size = New System.Drawing.Size(291, 281)
         Me.Panel2.TabIndex = 4
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label5.Location = New System.Drawing.Point(27, 101)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(179, 93)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "The Business" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Have" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Profits!"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -127,63 +184,6 @@ Partial Class dashboardSales
         Me.Label8.Size = New System.Drawing.Size(140, 23)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Business Result:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Gill Sans Ultra Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label5.Location = New System.Drawing.Point(27, 101)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(235, 117)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "The Business" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Have" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Profits!"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'expdLabel
-        '
-        Me.expdLabel.AutoSize = True
-        Me.expdLabel.BackColor = System.Drawing.Color.Transparent
-        Me.expdLabel.Font = New System.Drawing.Font("Franklin Gothic Heavy", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.expdLabel.Location = New System.Drawing.Point(59, 44)
-        Me.expdLabel.Name = "expdLabel"
-        Me.expdLabel.Size = New System.Drawing.Size(149, 34)
-        Me.expdLabel.TabIndex = 4
-        Me.expdLabel.Text = "expdLabel"
-        '
-        'ntcmLabel
-        '
-        Me.ntcmLabel.AutoSize = True
-        Me.ntcmLabel.BackColor = System.Drawing.Color.Transparent
-        Me.ntcmLabel.Font = New System.Drawing.Font("Franklin Gothic Heavy", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ntcmLabel.Location = New System.Drawing.Point(59, 312)
-        Me.ntcmLabel.Name = "ntcmLabel"
-        Me.ntcmLabel.Size = New System.Drawing.Size(149, 34)
-        Me.ntcmLabel.TabIndex = 5
-        Me.ntcmLabel.Text = "ntcmLabel"
-        '
-        'rvnLabel
-        '
-        Me.rvnLabel.AutoSize = True
-        Me.rvnLabel.BackColor = System.Drawing.Color.Transparent
-        Me.rvnLabel.Font = New System.Drawing.Font("Franklin Gothic Heavy", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.rvnLabel.Location = New System.Drawing.Point(59, 129)
-        Me.rvnLabel.Name = "rvnLabel"
-        Me.rvnLabel.Size = New System.Drawing.Size(126, 34)
-        Me.rvnLabel.TabIndex = 5
-        Me.rvnLabel.Text = "rvnLabel"
-        '
-        'sldLabel
-        '
-        Me.sldLabel.AutoSize = True
-        Me.sldLabel.BackColor = System.Drawing.Color.Transparent
-        Me.sldLabel.Font = New System.Drawing.Font("Franklin Gothic Heavy", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.sldLabel.Location = New System.Drawing.Point(59, 217)
-        Me.sldLabel.Name = "sldLabel"
-        Me.sldLabel.Size = New System.Drawing.Size(124, 34)
-        Me.sldLabel.TabIndex = 5
-        Me.sldLabel.Text = "sldLabel"
         '
         'dashboardSales
         '
