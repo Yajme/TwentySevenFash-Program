@@ -218,4 +218,5 @@ Partial Class dashboardSales
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Button1 As Button
 End Class

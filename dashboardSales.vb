@@ -2,6 +2,7 @@
 
 Public Class dashboardSales
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
+    Dim add As New SqlCommand("INSERT INTO sales (Profit) VALUES (@Profit)", con)
     Dim cmd As SqlCommand
     Dim cmdd As SqlCommand
 
@@ -16,6 +17,9 @@ Public Class dashboardSales
         Dim val2 As Integer
 
         Dim expenses As Double
+        Dim revenue As Double
+        Dim soldshirts As Double
+        Dim profit As Double
 
         val1 = 1
         val2 = 0
@@ -27,19 +31,34 @@ Public Class dashboardSales
             addi = cmdd.ExecuteReader()
             If (addi.Read()) Then
                 expenses = expenses + addi("Expenses")
+                revenue = revenue + addi("Revenue")
+                soldshirts = soldshirts + addi("SoldItems")
+                profit = expenses - revenue + addi("Profit")
+
             End If
-
-            expdLabel.Text = "PHP" & expenses
-
+            add.Parameters.AddWithValue("@Profit", ntcmLabel.Text)
+            expdLabel.Text = "PHP " & expenses
+            rvnLabel.Text = "PHP " & revenue
+            sldLabel.Text = soldshirts
+            ntcmLabel.Text = "PHP " & profit
             val1 = val1 + 1
             addi.Close()
+            If (profit > expenses) Then
+                Label5.Text = "The Business made a profit!"
+            ElseIf (expenses > profit) Then
+                Label5.Text = "The business is losing money."
+            End If
         End While
 
         con.Close()
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+=======
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+>>>>>>> 0bf9b867b57d4546a87882a88c2e4028063f08ff
     End Sub
 End Class

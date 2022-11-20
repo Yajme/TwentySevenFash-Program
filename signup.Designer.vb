@@ -56,7 +56,7 @@ Partial Class signup
         Me.Panel1.Controls.Add(Me.txtID)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(342, 153)
+        Me.Panel1.Location = New System.Drawing.Point(311, 103)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(577, 357)
         Me.Panel1.TabIndex = 0
