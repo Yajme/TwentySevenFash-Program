@@ -30,10 +30,10 @@ Public Class dashboardSales
             cmdd.Parameters.AddWithValue("Id", val1)
             addi = cmdd.ExecuteReader()
             If (addi.Read()) Then
-                expenses = expenses + addi("Expenses")
-                revenue = revenue + addi("Revenue")
-                soldshirts = soldshirts + addi("SoldItems")
-                profit = expenses - revenue + addi("Profit")
+                expenses = expenses + Val(addi("Expenses"))
+                revenue = revenue + Val(addi("Revenue"))
+                soldshirts = soldshirts + Val(addi("SoldItems"))
+                profit = expenses - revenue + Val(addi("Profit"))
 
             End If
             add.Parameters.AddWithValue("@Profit", ntcmLabel.Text)
