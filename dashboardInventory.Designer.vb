@@ -24,18 +24,17 @@ Partial Class dashboardInventory
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboardInventory))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Brand = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Size = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Color = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEdit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColDelete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSearch = New FontAwesome.Sharp.IconButton()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Brand = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Size = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEdit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColDelete = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +49,7 @@ Partial Class dashboardInventory
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ItemName, Me.Brand, Me.Size, Me.Color, Me.Price, Me.colEdit, Me.ColDelete})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ItemName, Me.Brand, Me.Size, Me.Price, Me.colEdit, Me.ColDelete})
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DataGridView1.Location = New System.Drawing.Point(10, 69)
@@ -63,74 +62,6 @@ Partial Class dashboardInventory
         Me.DataGridView1.RowTemplate.Height = 29
         Me.DataGridView1.Size = New System.Drawing.Size(885, 373)
         Me.DataGridView1.TabIndex = 0
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 6
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 125
-        '
-        'ItemName
-        '
-        Me.ItemName.HeaderText = "ItemName"
-        Me.ItemName.MinimumWidth = 6
-        Me.ItemName.Name = "ItemName"
-        Me.ItemName.ReadOnly = True
-        Me.ItemName.Width = 125
-        '
-        'Brand
-        '
-        Me.Brand.HeaderText = "Brand"
-        Me.Brand.MinimumWidth = 6
-        Me.Brand.Name = "Brand"
-        Me.Brand.ReadOnly = True
-        Me.Brand.Width = 125
-        '
-        'Size
-        '
-        Me.Size.HeaderText = "Size"
-        Me.Size.MinimumWidth = 6
-        Me.Size.Name = "Size"
-        Me.Size.ReadOnly = True
-        Me.Size.Width = 125
-        '
-        'Color
-        '
-        Me.Color.HeaderText = "Color"
-        Me.Color.MinimumWidth = 6
-        Me.Color.Name = "Color"
-        Me.Color.ReadOnly = True
-        Me.Color.Width = 125
-        '
-        'Price
-        '
-        Me.Price.HeaderText = "Price"
-        Me.Price.MinimumWidth = 6
-        Me.Price.Name = "Price"
-        Me.Price.ReadOnly = True
-        Me.Price.Width = 125
-        '
-        'colEdit
-        '
-        Me.colEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colEdit.HeaderText = ""
-        Me.colEdit.Image = CType(resources.GetObject("colEdit.Image"), System.Drawing.Image)
-        Me.colEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.colEdit.MinimumWidth = 6
-        Me.colEdit.Name = "colEdit"
-        Me.colEdit.ReadOnly = True
-        '
-        'ColDelete
-        '
-        Me.ColDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColDelete.HeaderText = ""
-        Me.ColDelete.Image = CType(resources.GetObject("ColDelete.Image"), System.Drawing.Image)
-        Me.ColDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.ColDelete.MinimumWidth = 6
-        Me.ColDelete.Name = "ColDelete"
-        Me.ColDelete.ReadOnly = True
         '
         'IconButton3
         '
@@ -197,6 +128,66 @@ Partial Class dashboardInventory
         Me.btnSearch.TabIndex = 6
         Me.btnSearch.UseVisualStyleBackColor = False
         '
+        'ID
+        '
+        Me.ID.HeaderText = "ID"
+        Me.ID.MinimumWidth = 6
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 125
+        '
+        'ItemName
+        '
+        Me.ItemName.HeaderText = "ItemName"
+        Me.ItemName.MinimumWidth = 6
+        Me.ItemName.Name = "ItemName"
+        Me.ItemName.ReadOnly = True
+        Me.ItemName.Width = 125
+        '
+        'Brand
+        '
+        Me.Brand.HeaderText = "Brand"
+        Me.Brand.MinimumWidth = 6
+        Me.Brand.Name = "Brand"
+        Me.Brand.ReadOnly = True
+        Me.Brand.Width = 125
+        '
+        'Size
+        '
+        Me.Size.HeaderText = "Size"
+        Me.Size.MinimumWidth = 6
+        Me.Size.Name = "Size"
+        Me.Size.ReadOnly = True
+        Me.Size.Width = 125
+        '
+        'Price
+        '
+        Me.Price.HeaderText = "Price"
+        Me.Price.MinimumWidth = 6
+        Me.Price.Name = "Price"
+        Me.Price.ReadOnly = True
+        Me.Price.Width = 125
+        '
+        'colEdit
+        '
+        Me.colEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colEdit.HeaderText = ""
+        Me.colEdit.Image = CType(resources.GetObject("colEdit.Image"), System.Drawing.Image)
+        Me.colEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.colEdit.MinimumWidth = 6
+        Me.colEdit.Name = "colEdit"
+        Me.colEdit.ReadOnly = True
+        '
+        'ColDelete
+        '
+        Me.ColDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColDelete.HeaderText = ""
+        Me.ColDelete.Image = CType(resources.GetObject("ColDelete.Image"), System.Drawing.Image)
+        Me.ColDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.ColDelete.MinimumWidth = 6
+        Me.ColDelete.Name = "ColDelete"
+        Me.ColDelete.ReadOnly = True
+        '
         'dashboardInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -222,15 +213,14 @@ Partial Class dashboardInventory
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnSearch As FontAwesome.Sharp.IconButton
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents ItemName As DataGridViewTextBoxColumn
     Friend WithEvents Brand As DataGridViewTextBoxColumn
     Friend WithEvents Size As DataGridViewTextBoxColumn
-    Friend WithEvents Color As DataGridViewTextBoxColumn
     Friend WithEvents Price As DataGridViewTextBoxColumn
     Friend WithEvents colEdit As DataGridViewImageColumn
     Friend WithEvents ColDelete As DataGridViewImageColumn
-    Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnSearch As FontAwesome.Sharp.IconButton
 End Class

@@ -15,7 +15,7 @@ Public Class dashboardInventory
         DataGridView1.Rows.Clear()
 
         While dr.Read
-            DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("Color"), dr.Item("price"))
+            DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("price"))
         End While
         dr.Close()
         con.Close()
@@ -31,8 +31,7 @@ Public Class dashboardInventory
                 .txtItemName.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString
                 .txtBrand.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString
                 .cmbSize.SelectedItem = DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString
-                .txtColor.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString
-                .txtPrice.Text = DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString
+                .txtPrice.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString
                 .btnUpdate.Enabled = True
                 .btnAddItem.Visible = False
                 .ShowDialog()
