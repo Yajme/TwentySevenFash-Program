@@ -43,9 +43,9 @@ Public Class dashboardSales
             ntcmLabel.Text = "PHP " & profit
             val1 = val1 + 1
             addi.Close()
-            If (profit > expenses) Then
+            If (revenue > expenses) Then
                 Label5.Text = "The Business made a profit!"
-            ElseIf (expenses > profit) Then
+            ElseIf (expenses > revenue) Then
                 Label5.Text = "The business is losing money."
             End If
         End While

@@ -167,7 +167,7 @@ Partial Class dashboardSales
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label5.Location = New System.Drawing.Point(27, 101)
+        Me.Label5.Location = New System.Drawing.Point(57, 107)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(179, 93)
         Me.Label5.TabIndex = 1
