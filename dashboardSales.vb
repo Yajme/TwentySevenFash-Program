@@ -54,11 +54,6 @@ Public Class dashboardSales
 
     End Sub
 
-<<<<<<< HEAD
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
-=======
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
->>>>>>> 0bf9b867b57d4546a87882a88c2e4028063f08ff
-    End Sub
+
 End Class
