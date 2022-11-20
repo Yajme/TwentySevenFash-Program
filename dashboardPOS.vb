@@ -103,8 +103,13 @@ Public Class dashboardPOS
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        con.Open()
+        Dim county As New SqlCommand("select count(*) from Sales", con)
+        Dim count1 = Convert.ToInt16(county.ExecuteScalar)
+
+        con.Close()
         Dim rand As New Random
-        Dim transcID As Integer = rand.Next(1000, 9999)
+        Dim transcID As Integer = count1
         Dim confirmation As String = MsgBox("Checkout?", MsgBoxStyle.YesNo, "Confirmation")
         If confirmation = vbYes Then
             Dim cash As Double = InputBox("Cash: ", "Cash")
