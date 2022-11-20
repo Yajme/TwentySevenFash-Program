@@ -69,4 +69,8 @@ Public Class signup
         txtPass.Text = ""
         txtUserN.Text = ""
     End Sub
+
+    Private Sub txtID_TextChanged(sender As Object, e As EventArgs) 
+
+    End Sub
 End Class
