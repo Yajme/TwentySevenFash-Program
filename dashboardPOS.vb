@@ -71,9 +71,8 @@ Public Class dashboardPOS
     End Sub
 
     Public Sub DynamicButton_click(ByVal sender As Object, ByVal e As EventArgs)
-        Dim confirmation As String = MsgBox("Add to Cart?", MsgBoxStyle.YesNo, "Confirmation")
-        If confirmation = vbYes Then
-            Try
+
+        Try
                 con.Open()
                 cmd = New SqlCommand("select * from Items where ID= @ID", con)
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = sender.tag.ToString
@@ -91,7 +90,7 @@ Public Class dashboardPOS
                 MsgBox("Database Error", MsgBoxStyle.Critical)
             End Try
 
-        End If
+
 
 
     End Sub

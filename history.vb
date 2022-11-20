@@ -20,6 +20,12 @@ Public Class History
                     Using dt As New DataTable()
                         sda.Fill(dt)
                         dgvHistory.DataSource = dt
+                        With dgvHistory
+                            .AllowUserToAddRows = False
+                            .AllowUserToDeleteRows = False
+                            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                            .RowHeadersVisible = False
+                        End With
                     End Using
                 End Using
             End Using
