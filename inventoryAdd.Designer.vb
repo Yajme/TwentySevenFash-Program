@@ -27,13 +27,11 @@ Partial Class inventoryAdd
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.txtItemName = New System.Windows.Forms.TextBox()
         Me.txtBrand = New System.Windows.Forms.TextBox()
-        Me.txtColor = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnAddItem = New FontAwesome.Sharp.IconButton()
         Me.cmbSize = New System.Windows.Forms.ComboBox()
@@ -86,19 +84,10 @@ Partial Class inventoryAdd
         Me.txtBrand.Size = New System.Drawing.Size(195, 23)
         Me.txtBrand.TabIndex = 3
         '
-        'txtColor
-        '
-        Me.txtColor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtColor.Location = New System.Drawing.Point(154, 212)
-        Me.txtColor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtColor.Name = "txtColor"
-        Me.txtColor.Size = New System.Drawing.Size(195, 23)
-        Me.txtColor.TabIndex = 5
-        '
         'txtPrice
         '
         Me.txtPrice.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtPrice.Location = New System.Drawing.Point(154, 253)
+        Me.txtPrice.Location = New System.Drawing.Point(154, 212)
         Me.txtPrice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(195, 23)
@@ -148,23 +137,12 @@ Partial Class inventoryAdd
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Size"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(65, 215)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 16)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Color"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(68, 259)
+        Me.Label6.Location = New System.Drawing.Point(68, 218)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(42, 16)
         Me.Label6.TabIndex = 12
@@ -235,13 +213,11 @@ Partial Class inventoryAdd
         Me.Controls.Add(Me.cmbSize)
         Me.Controls.Add(Me.btnAddItem)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.txtColor)
         Me.Controls.Add(Me.txtBrand)
         Me.Controls.Add(Me.txtItemName)
         Me.Controls.Add(Me.txtID)
@@ -263,13 +239,11 @@ Partial Class inventoryAdd
     Friend WithEvents txtID As TextBox
     Friend WithEvents txtItemName As TextBox
     Friend WithEvents txtBrand As TextBox
-    Friend WithEvents txtColor As TextBox
     Friend WithEvents txtPrice As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents btnAddItem As FontAwesome.Sharp.IconButton
     Friend WithEvents cmbSize As ComboBox
