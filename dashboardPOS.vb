@@ -46,16 +46,23 @@ Public Class dashboardPOS
         cmd = New SqlCommand("select * from items", con)
         dr = cmd.ExecuteReader
         Dim count As Integer
+        Dim myFont As System.Drawing.Font
+        myFont = New System.Drawing.Font("Impact", 12)
         FlowLayoutPanel1.Controls.Clear()
         While dr.Read
             newButton = New Button()
 
             With newButton
-                .BackColor = Color.White
-                .Size = New Size(162, 123)
+                .BackColor = Color.FromArgb(46, 51, 73)
+                .ForeColor = Color.White
+                .Size = New Size(200, 123)
                 .Name = "btnItem" + count.ToString()
                 .Tag = dr.Item("ID").ToString()
                 .Text = dr.Item("ItemName").ToString()
+                .Font = myFont
+                .FlatStyle = FlatStyle.Flat
+                .FlatAppearance.BorderSize = 3
+                .FlatAppearance.BorderColor = Color.White
             End With
 
             FlowLayoutPanel1.Controls.Add(newButton)
@@ -128,6 +135,8 @@ Public Class dashboardPOS
                 con.Close()
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
+                lblTotal.Text = "0.00"
+                DataGridView1.Rows.Clear()
             Catch ex As Exception
                 con.Close()
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
@@ -207,6 +216,7 @@ Public Class dashboardPOS
 
     End Sub
 
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
 
-
+    End Sub
 End Class

@@ -52,9 +52,9 @@ Partial Class History
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(45, 77)
+        Me.Label1.Location = New System.Drawing.Point(23, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 42)
+        Me.Label1.Size = New System.Drawing.Size(188, 34)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "History of Sales"
         '
@@ -64,22 +64,24 @@ Partial Class History
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHistory.Location = New System.Drawing.Point(45, 185)
-        Me.dgvHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dgvHistory.Location = New System.Drawing.Point(12, 101)
         Me.dgvHistory.Name = "dgvHistory"
         Me.dgvHistory.ReadOnly = True
         Me.dgvHistory.RowHeadersWidth = 51
         Me.dgvHistory.RowTemplate.Height = 25
-        Me.dgvHistory.Size = New System.Drawing.Size(736, 549)
+        Me.dgvHistory.Size = New System.Drawing.Size(623, 370)
         Me.dgvHistory.TabIndex = 1
         '
         'btnFilter
         '
-        Me.btnFilter.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnFilter.Location = New System.Drawing.Point(385, 147)
-        Me.btnFilter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnFilter.BackgroundImage = CType(resources.GetObject("btnFilter.BackgroundImage"), System.Drawing.Image)
+        Me.btnFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFilter.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnFilter.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnFilter.Location = New System.Drawing.Point(321, 60)
         Me.btnFilter.Name = "btnFilter"
-        Me.btnFilter.Size = New System.Drawing.Size(131, 31)
+        Me.btnFilter.Size = New System.Drawing.Size(115, 35)
         Me.btnFilter.TabIndex = 6
         Me.btnFilter.Text = "Load Records"
         Me.btnFilter.UseVisualStyleBackColor = True
@@ -90,10 +92,9 @@ Partial Class History
         Me.dtpDate.Checked = False
         Me.dtpDate.CustomFormat = "MM/dd/yyyy"
         Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDate.Location = New System.Drawing.Point(150, 147)
-        Me.dtpDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dtpDate.Location = New System.Drawing.Point(115, 72)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(228, 27)
+        Me.dtpDate.Size = New System.Drawing.Size(200, 23)
         Me.dtpDate.TabIndex = 7
         Me.dtpDate.Value = New Date(2022, 11, 15, 0, 0, 0, 0)
         '
@@ -103,9 +104,9 @@ Partial Class History
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(45, 147)
+        Me.Label2.Location = New System.Drawing.Point(23, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 28)
+        Me.Label2.Size = New System.Drawing.Size(90, 21)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Select Date:"
         '
@@ -123,11 +124,9 @@ Partial Class History
         Me.GroupBox1.Controls.Add(Me.lblDate)
         Me.GroupBox1.Font = New System.Drawing.Font("Impact", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
-        Me.GroupBox1.Location = New System.Drawing.Point(808, 164)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(641, 23)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(333, 571)
+        Me.GroupBox1.Size = New System.Drawing.Size(250, 451)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Daily Sales Report"
@@ -138,9 +137,9 @@ Partial Class History
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(21, 440)
+        Me.Label4.Location = New System.Drawing.Point(18, 355)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(181, 28)
+        Me.Label4.Size = New System.Drawing.Size(145, 21)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "No. of Sold Items:"
         '
@@ -150,9 +149,9 @@ Partial Class History
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(21, 335)
+        Me.Label5.Location = New System.Drawing.Point(18, 251)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(71, 28)
+        Me.Label5.Size = New System.Drawing.Size(57, 21)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Profit:"
         '
@@ -162,9 +161,9 @@ Partial Class History
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(21, 228)
+        Me.Label6.Location = New System.Drawing.Point(18, 156)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 28)
+        Me.Label6.Size = New System.Drawing.Size(84, 21)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "Expenses:"
         '
@@ -174,9 +173,9 @@ Partial Class History
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label7.Location = New System.Drawing.Point(21, 131)
+        Me.Label7.Location = New System.Drawing.Point(18, 68)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(98, 28)
+        Me.Label7.Size = New System.Drawing.Size(80, 21)
         Me.Label7.TabIndex = 26
         Me.Label7.Text = "Revenue:"
         '
@@ -186,9 +185,9 @@ Partial Class History
         Me.lblSoldItems.BackColor = System.Drawing.Color.Transparent
         Me.lblSoldItems.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblSoldItems.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblSoldItems.Location = New System.Drawing.Point(21, 473)
+        Me.lblSoldItems.Location = New System.Drawing.Point(18, 355)
         Me.lblSoldItems.Name = "lblSoldItems"
-        Me.lblSoldItems.Size = New System.Drawing.Size(0, 41)
+        Me.lblSoldItems.Size = New System.Drawing.Size(0, 32)
         Me.lblSoldItems.TabIndex = 24
         '
         'lblProfit
@@ -197,9 +196,9 @@ Partial Class History
         Me.lblProfit.BackColor = System.Drawing.Color.Transparent
         Me.lblProfit.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblProfit.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblProfit.Location = New System.Drawing.Point(21, 367)
+        Me.lblProfit.Location = New System.Drawing.Point(18, 275)
         Me.lblProfit.Name = "lblProfit"
-        Me.lblProfit.Size = New System.Drawing.Size(0, 41)
+        Me.lblProfit.Size = New System.Drawing.Size(0, 32)
         Me.lblProfit.TabIndex = 23
         '
         'lblExpenses
@@ -208,9 +207,9 @@ Partial Class History
         Me.lblExpenses.BackColor = System.Drawing.Color.Transparent
         Me.lblExpenses.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblExpenses.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblExpenses.Location = New System.Drawing.Point(21, 264)
+        Me.lblExpenses.Location = New System.Drawing.Point(18, 198)
         Me.lblExpenses.Name = "lblExpenses"
-        Me.lblExpenses.Size = New System.Drawing.Size(0, 41)
+        Me.lblExpenses.Size = New System.Drawing.Size(0, 32)
         Me.lblExpenses.TabIndex = 22
         '
         'lblRevenue
@@ -219,9 +218,9 @@ Partial Class History
         Me.lblRevenue.BackColor = System.Drawing.Color.Transparent
         Me.lblRevenue.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblRevenue.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblRevenue.Location = New System.Drawing.Point(21, 164)
+        Me.lblRevenue.Location = New System.Drawing.Point(18, 123)
         Me.lblRevenue.Name = "lblRevenue"
-        Me.lblRevenue.Size = New System.Drawing.Size(0, 41)
+        Me.lblRevenue.Size = New System.Drawing.Size(0, 32)
         Me.lblRevenue.TabIndex = 21
         '
         'lblDate
@@ -230,28 +229,32 @@ Partial Class History
         Me.lblDate.BackColor = System.Drawing.Color.Transparent
         Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblDate.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblDate.Location = New System.Drawing.Point(21, 67)
+        Me.lblDate.Location = New System.Drawing.Point(18, 50)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(0, 41)
+        Me.lblDate.Size = New System.Drawing.Size(0, 32)
         Me.lblDate.TabIndex = 20
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(523, 147)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.Location = New System.Drawing.Point(442, 60)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(129, 31)
+        Me.Button1.Size = New System.Drawing.Size(113, 35)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Load All"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'History
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1183, 784)
+        Me.ClientSize = New System.Drawing.Size(921, 486)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
@@ -260,7 +263,7 @@ Partial Class History
         Me.Controls.Add(Me.dgvHistory)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "History"
         Me.Text = "Twenty Seven Fash | History"
         CType(Me.dgvHistory, System.ComponentModel.ISupportInitialize).EndInit()

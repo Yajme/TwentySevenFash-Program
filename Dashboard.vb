@@ -32,9 +32,12 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
+    Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click, hitoryBtn.Click
         changeMenu(dashboardInventory)
         'ItemsByBelleAndJM.Show()
+    End Sub
+    Private Sub historyBtn(sender As Object, e As EventArgs) Handles btnInventory.Click, hitoryBtn.Click
+        changeMenu(History)
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -64,11 +67,15 @@ Public Class Dashboard
         End If
     End Sub
 
-    Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
+    Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs)
         History.Show()
     End Sub
 
     Private Sub SignUpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SignUpToolStripMenuItem.Click
         signup.Show()
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
     End Sub
 End Class

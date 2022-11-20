@@ -43,10 +43,10 @@ Partial Class Dashboard
         Me.MENUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SignUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SignUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.hitoryBtn = New FontAwesome.Sharp.IconButton()
         Me.SidePanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PanelContainer.SuspendLayout()
@@ -62,6 +62,7 @@ Partial Class Dashboard
         Me.SidePanel.Controls.Add(Me.wlcmLabel)
         Me.SidePanel.Controls.Add(Me.btnHome)
         Me.SidePanel.Controls.Add(Me.Panel2)
+        Me.SidePanel.Controls.Add(Me.hitoryBtn)
         Me.SidePanel.Controls.Add(Me.btnInventory)
         Me.SidePanel.Controls.Add(Me.btnSales)
         Me.SidePanel.Controls.Add(Me.btnPOS)
@@ -95,11 +96,11 @@ Partial Class Dashboard
         'wlcmLabel
         '
         Me.wlcmLabel.AutoSize = True
-        Me.wlcmLabel.Font = New System.Drawing.Font("Cooper Black", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.wlcmLabel.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.wlcmLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.wlcmLabel.Location = New System.Drawing.Point(45, 39)
+        Me.wlcmLabel.Location = New System.Drawing.Point(61, 33)
         Me.wlcmLabel.Name = "wlcmLabel"
-        Me.wlcmLabel.Size = New System.Drawing.Size(161, 34)
+        Me.wlcmLabel.Size = New System.Drawing.Size(135, 27)
         Me.wlcmLabel.TabIndex = 4
         Me.wlcmLabel.Text = "Welcome! "
         Me.wlcmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -117,10 +118,10 @@ Partial Class Dashboard
         Me.btnHome.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnHome.IconColor = System.Drawing.Color.Black
         Me.btnHome.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnHome.Location = New System.Drawing.Point(-2, 137)
+        Me.btnHome.Location = New System.Drawing.Point(-1, 121)
         Me.btnHome.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnHome.Name = "btnHome"
-        Me.btnHome.Size = New System.Drawing.Size(245, 76)
+        Me.btnHome.Size = New System.Drawing.Size(246, 70)
         Me.btnHome.TabIndex = 0
         Me.btnHome.Text = "Home"
         Me.btnHome.UseVisualStyleBackColor = False
@@ -145,10 +146,10 @@ Partial Class Dashboard
         Me.btnInventory.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnInventory.IconColor = System.Drawing.Color.Black
         Me.btnInventory.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnInventory.Location = New System.Drawing.Point(-1, 377)
+        Me.btnInventory.Location = New System.Drawing.Point(-2, 346)
         Me.btnInventory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnInventory.Name = "btnInventory"
-        Me.btnInventory.Size = New System.Drawing.Size(245, 76)
+        Me.btnInventory.Size = New System.Drawing.Size(246, 70)
         Me.btnInventory.TabIndex = 3
         Me.btnInventory.Text = "Inventory"
         Me.btnInventory.UseVisualStyleBackColor = True
@@ -165,10 +166,10 @@ Partial Class Dashboard
         Me.btnSales.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnSales.IconColor = System.Drawing.Color.Black
         Me.btnSales.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSales.Location = New System.Drawing.Point(-1, 297)
+        Me.btnSales.Location = New System.Drawing.Point(0, 270)
         Me.btnSales.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSales.Name = "btnSales"
-        Me.btnSales.Size = New System.Drawing.Size(243, 76)
+        Me.btnSales.Size = New System.Drawing.Size(244, 70)
         Me.btnSales.TabIndex = 2
         Me.btnSales.Text = "Sales"
         Me.btnSales.UseVisualStyleBackColor = True
@@ -185,10 +186,10 @@ Partial Class Dashboard
         Me.btnPOS.IconChar = FontAwesome.Sharp.IconChar.None
         Me.btnPOS.IconColor = System.Drawing.Color.Black
         Me.btnPOS.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPOS.Location = New System.Drawing.Point(-2, 217)
+        Me.btnPOS.Location = New System.Drawing.Point(-1, 195)
         Me.btnPOS.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnPOS.Name = "btnPOS"
-        Me.btnPOS.Size = New System.Drawing.Size(245, 76)
+        Me.btnPOS.Size = New System.Drawing.Size(246, 70)
         Me.btnPOS.TabIndex = 1
         Me.btnPOS.Text = "POS"
         Me.btnPOS.UseVisualStyleBackColor = True
@@ -267,7 +268,7 @@ Partial Class Dashboard
         '
         'MENUToolStripMenuItem
         '
-        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.HistoryToolStripMenuItem, Me.SignUpToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.SignUpToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MENUToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.MENUToolStripMenuItem.Name = "MENUToolStripMenuItem"
         Me.MENUToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
@@ -285,11 +286,11 @@ Partial Class Dashboard
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
-        'HistoryToolStripMenuItem
+        'SignUpToolStripMenuItem
         '
-        Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
-        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
-        Me.HistoryToolStripMenuItem.Text = "History"
+        Me.SignUpToolStripMenuItem.Name = "SignUpToolStripMenuItem"
+        Me.SignUpToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
+        Me.SignUpToolStripMenuItem.Text = "SignUp"
         '
         'LogoutToolStripMenuItem
         '
@@ -303,11 +304,25 @@ Partial Class Dashboard
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'SignUpToolStripMenuItem
+        'hitoryBtn
         '
-        Me.SignUpToolStripMenuItem.Name = "SignUpToolStripMenuItem"
-        Me.SignUpToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
-        Me.SignUpToolStripMenuItem.Text = "SignUp"
+        Me.hitoryBtn.BackgroundImage = CType(resources.GetObject("hitoryBtn.BackgroundImage"), System.Drawing.Image)
+        Me.hitoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.hitoryBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.hitoryBtn.FlatAppearance.BorderSize = 0
+        Me.hitoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hitoryBtn.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.hitoryBtn.ForeColor = System.Drawing.Color.White
+        Me.hitoryBtn.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.hitoryBtn.IconColor = System.Drawing.Color.Black
+        Me.hitoryBtn.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.hitoryBtn.Location = New System.Drawing.Point(-2, 421)
+        Me.hitoryBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.hitoryBtn.Name = "hitoryBtn"
+        Me.hitoryBtn.Size = New System.Drawing.Size(246, 70)
+        Me.hitoryBtn.TabIndex = 3
+        Me.hitoryBtn.Text = "History"
+        Me.hitoryBtn.UseVisualStyleBackColor = True
         '
         'Dashboard
         '
@@ -360,6 +375,6 @@ Partial Class Dashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents loginName As Label
-    Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SignUpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents hitoryBtn As FontAwesome.Sharp.IconButton
 End Class
