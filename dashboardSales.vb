@@ -13,6 +13,9 @@ Public Class dashboardSales
 
         con.Open()
 
+        Dim count As New SqlCommand("Select count(*) from Sales", con)
+
+        Dim count1 = Convert.ToInt32(count.ExecuteScalar)
         Dim val1 As Integer
         Dim val2 As Integer
 
@@ -24,7 +27,7 @@ Public Class dashboardSales
         val1 = 1
         val2 = 0
 
-        While val1 <= 3
+        While val1 <= count1
             Dim doman As String = "Select DateofTransaction,Id,Revenue,Expenses,Profit,SoldItems from Sales where Id=" & val1
             cmdd = New SqlCommand(doman, con)
             cmdd.Parameters.AddWithValue("Id", val1)
