@@ -32,11 +32,11 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click, hitoryBtn.Click
+    Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
         changeMenu(dashboardInventory)
         'ItemsByBelleAndJM.Show()
     End Sub
-    Private Sub historyBtn(sender As Object, e As EventArgs) Handles btnInventory.Click, hitoryBtn.Click
+    Private Sub historyBtn(sender As Object, e As EventArgs) Handles hitoryBtn.Click
         changeMenu(History)
     End Sub
 
