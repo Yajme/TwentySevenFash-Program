@@ -35,6 +35,7 @@ Partial Class dashboardSales
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -66,9 +67,8 @@ Partial Class dashboardSales
         Me.rvnLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.rvnLabel.Location = New System.Drawing.Point(59, 129)
         Me.rvnLabel.Name = "rvnLabel"
-        Me.rvnLabel.Size = New System.Drawing.Size(118, 31)
+        Me.rvnLabel.Size = New System.Drawing.Size(0, 31)
         Me.rvnLabel.TabIndex = 5
-        Me.rvnLabel.Text = "rvnLabel"
         '
         'sldLabel
         '
@@ -77,9 +77,8 @@ Partial Class dashboardSales
         Me.sldLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.sldLabel.Location = New System.Drawing.Point(59, 217)
         Me.sldLabel.Name = "sldLabel"
-        Me.sldLabel.Size = New System.Drawing.Size(115, 31)
+        Me.sldLabel.Size = New System.Drawing.Size(0, 31)
         Me.sldLabel.TabIndex = 5
-        Me.sldLabel.Text = "sldLabel"
         '
         'ntcmLabel
         '
@@ -88,9 +87,8 @@ Partial Class dashboardSales
         Me.ntcmLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ntcmLabel.Location = New System.Drawing.Point(59, 312)
         Me.ntcmLabel.Name = "ntcmLabel"
-        Me.ntcmLabel.Size = New System.Drawing.Size(139, 31)
+        Me.ntcmLabel.Size = New System.Drawing.Size(0, 31)
         Me.ntcmLabel.TabIndex = 5
-        Me.ntcmLabel.Text = "ntcmLabel"
         '
         'expdLabel
         '
@@ -99,9 +97,8 @@ Partial Class dashboardSales
         Me.expdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.expdLabel.Location = New System.Drawing.Point(59, 44)
         Me.expdLabel.Name = "expdLabel"
-        Me.expdLabel.Size = New System.Drawing.Size(138, 31)
+        Me.expdLabel.Size = New System.Drawing.Size(0, 31)
         Me.expdLabel.TabIndex = 4
-        Me.expdLabel.Text = "expdLabel"
         '
         'Label4
         '
@@ -153,6 +150,7 @@ Partial Class dashboardSales
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -167,11 +165,10 @@ Partial Class dashboardSales
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label5.Location = New System.Drawing.Point(57, 107)
+        Me.Label5.Location = New System.Drawing.Point(40, 95)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(179, 93)
+        Me.Label5.Size = New System.Drawing.Size(0, 31)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "The Business" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Have" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Profits!"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
@@ -184,6 +181,18 @@ Partial Class dashboardSales
         Me.Label8.Size = New System.Drawing.Size(140, 23)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Business Result:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label6.Location = New System.Drawing.Point(46, 129)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(0, 31)
+        Me.Label6.TabIndex = 2
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dashboardSales
         '
@@ -219,4 +228,5 @@ Partial Class dashboardSales
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label6 As Label
 End Class

@@ -44,9 +44,12 @@ Public Class dashboardSales
             val1 = val1 + 1
             addi.Close()
             If (revenue > expenses) Then
-                Label5.Text = "The Business made a profit!"
+                Label5.Text = "The Business is"
+                Label6.Text = "making money!"
             ElseIf (expenses > revenue) Then
-                Label5.Text = "The business is losing money."
+                Label5.Text = "The business is"
+                Label6.Text = "losing money!"
+
             End If
         End While
 
