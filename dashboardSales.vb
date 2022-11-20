@@ -10,7 +10,10 @@ Public Class dashboardSales
     Dim addi As SqlDataReader
 
     Private Sub dashboardSales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_items()
+    End Sub
 
+    Private Sub load_items()
         con.Open()
 
         Dim count As New SqlCommand("Select count(*) from Sales", con)
@@ -36,7 +39,7 @@ Public Class dashboardSales
                 expenses = expenses + Val(addi("Expenses"))
                 revenue = revenue + Val(addi("Revenue"))
                 soldshirts = soldshirts + Val(addi("SoldItems"))
-                profit = expenses - revenue + Val(addi("Profit"))
+                profit = revenue - expenses
 
             End If
             add.Parameters.AddWithValue("@Profit", ntcmLabel.Text)
@@ -57,9 +60,9 @@ Public Class dashboardSales
         End While
 
         con.Close()
-
     End Sub
 
-
-
+    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+        load_items()
+    End Sub
 End Class

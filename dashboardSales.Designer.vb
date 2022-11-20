@@ -33,11 +33,13 @@ Partial Class dashboardSales
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnRefresh = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.BtnRefresh, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -159,6 +161,18 @@ Partial Class dashboardSales
         Me.Panel2.Size = New System.Drawing.Size(291, 281)
         Me.Panel2.TabIndex = 4
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label6.Location = New System.Drawing.Point(46, 129)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(0, 31)
+        Me.Label6.TabIndex = 2
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -182,17 +196,13 @@ Partial Class dashboardSales
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Business Result:"
         '
-        'Label6
+        'BtnRefresh
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label6.Location = New System.Drawing.Point(46, 129)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(0, 31)
-        Me.Label6.TabIndex = 2
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnRefresh.Location = New System.Drawing.Point(840, 389)
+        Me.BtnRefresh.Name = "BtnRefresh"
+        Me.BtnRefresh.Size = New System.Drawing.Size(54, 50)
+        Me.BtnRefresh.TabIndex = 6
+        Me.BtnRefresh.TabStop = False
         '
         'dashboardSales
         '
@@ -201,6 +211,7 @@ Partial Class dashboardSales
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(906, 451)
+        Me.Controls.Add(Me.BtnRefresh)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
@@ -211,6 +222,7 @@ Partial Class dashboardSales
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.BtnRefresh, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -229,4 +241,5 @@ Partial Class dashboardSales
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents BtnRefresh As PictureBox
 End Class
