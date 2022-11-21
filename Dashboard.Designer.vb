@@ -30,6 +30,7 @@ Partial Class Dashboard
         Me.wlcmLabel = New System.Windows.Forms.Label()
         Me.btnHome = New FontAwesome.Sharp.IconButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.hitoryBtn = New FontAwesome.Sharp.IconButton()
         Me.btnInventory = New FontAwesome.Sharp.IconButton()
         Me.btnSales = New FontAwesome.Sharp.IconButton()
         Me.btnPOS = New FontAwesome.Sharp.IconButton()
@@ -46,7 +47,6 @@ Partial Class Dashboard
         Me.SignUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.hitoryBtn = New FontAwesome.Sharp.IconButton()
         Me.SidePanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PanelContainer.SuspendLayout()
@@ -133,6 +133,26 @@ Partial Class Dashboard
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(911, 422)
         Me.Panel2.TabIndex = 1
+        '
+        'hitoryBtn
+        '
+        Me.hitoryBtn.BackgroundImage = CType(resources.GetObject("hitoryBtn.BackgroundImage"), System.Drawing.Image)
+        Me.hitoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.hitoryBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.hitoryBtn.FlatAppearance.BorderSize = 0
+        Me.hitoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hitoryBtn.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.hitoryBtn.ForeColor = System.Drawing.Color.White
+        Me.hitoryBtn.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.hitoryBtn.IconColor = System.Drawing.Color.Black
+        Me.hitoryBtn.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.hitoryBtn.Location = New System.Drawing.Point(-2, 421)
+        Me.hitoryBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.hitoryBtn.Name = "hitoryBtn"
+        Me.hitoryBtn.Size = New System.Drawing.Size(246, 70)
+        Me.hitoryBtn.TabIndex = 3
+        Me.hitoryBtn.Text = "History"
+        Me.hitoryBtn.UseVisualStyleBackColor = True
         '
         'btnInventory
         '
@@ -303,26 +323,6 @@ Partial Class Dashboard
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
         Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'hitoryBtn
-        '
-        Me.hitoryBtn.BackgroundImage = CType(resources.GetObject("hitoryBtn.BackgroundImage"), System.Drawing.Image)
-        Me.hitoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.hitoryBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.hitoryBtn.FlatAppearance.BorderSize = 0
-        Me.hitoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.hitoryBtn.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.hitoryBtn.ForeColor = System.Drawing.Color.White
-        Me.hitoryBtn.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.hitoryBtn.IconColor = System.Drawing.Color.Black
-        Me.hitoryBtn.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.hitoryBtn.Location = New System.Drawing.Point(-2, 421)
-        Me.hitoryBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.hitoryBtn.Name = "hitoryBtn"
-        Me.hitoryBtn.Size = New System.Drawing.Size(246, 70)
-        Me.hitoryBtn.TabIndex = 3
-        Me.hitoryBtn.Text = "History"
-        Me.hitoryBtn.UseVisualStyleBackColor = True
         '
         'Dashboard
         '

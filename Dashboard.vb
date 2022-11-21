@@ -7,6 +7,7 @@ Public Class Dashboard
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
 
+
     Public Property wlcm As String
 
     Public Shared dashboardmain
@@ -21,6 +22,7 @@ Public Class Dashboard
     End Sub
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         changeMenu(dashboardHome)
+
     End Sub
 
     Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
@@ -28,6 +30,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
+        changeMenu(loadingScreen)
         changeMenu(dashboardPOS)
 
     End Sub
@@ -41,6 +44,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        changeMenu(loadingScreen)
         changeMenu(dashboardHome)
 
         wlcmLabel.Text = "Welcome! " & vbNewLine & dashboardmain
@@ -76,6 +80,10 @@ Public Class Dashboard
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles PanelContainer.Paint
 
     End Sub
 End Class
