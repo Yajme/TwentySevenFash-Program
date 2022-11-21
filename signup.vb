@@ -60,7 +60,7 @@ Public Class signup
             MsgBox("Error")
         End If
 
-
+        con.Close()
     End Sub
 
     Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
