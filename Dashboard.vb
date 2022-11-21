@@ -30,7 +30,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
-        changeMenu(loadingScreen)
+
         changeMenu(dashboardPOS)
 
     End Sub
@@ -44,7 +44,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        changeMenu(loadingScreen)
+
         changeMenu(dashboardHome)
 
         wlcmLabel.Text = "Welcome! " & vbNewLine & dashboardmain
