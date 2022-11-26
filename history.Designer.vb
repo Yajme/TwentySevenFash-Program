@@ -124,7 +124,7 @@ Partial Class History
         Me.GroupBox1.Controls.Add(Me.lblDate)
         Me.GroupBox1.Font = New System.Drawing.Font("Impact", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
-        Me.GroupBox1.Location = New System.Drawing.Point(641, 23)
+        Me.GroupBox1.Location = New System.Drawing.Point(641, 20)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(250, 451)
         Me.GroupBox1.TabIndex = 15
@@ -137,7 +137,7 @@ Partial Class History
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(18, 355)
+        Me.Label4.Location = New System.Drawing.Point(20, 363)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(145, 21)
         Me.Label4.TabIndex = 29
@@ -149,7 +149,7 @@ Partial Class History
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(18, 251)
+        Me.Label5.Location = New System.Drawing.Point(20, 277)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(57, 21)
         Me.Label5.TabIndex = 28
@@ -161,7 +161,7 @@ Partial Class History
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(18, 156)
+        Me.Label6.Location = New System.Drawing.Point(20, 191)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(84, 21)
         Me.Label6.TabIndex = 27
@@ -173,7 +173,7 @@ Partial Class History
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label7.Location = New System.Drawing.Point(18, 68)
+        Me.Label7.Location = New System.Drawing.Point(20, 105)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(80, 21)
         Me.Label7.TabIndex = 26
@@ -185,7 +185,7 @@ Partial Class History
         Me.lblSoldItems.BackColor = System.Drawing.Color.Transparent
         Me.lblSoldItems.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblSoldItems.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblSoldItems.Location = New System.Drawing.Point(18, 355)
+        Me.lblSoldItems.Location = New System.Drawing.Point(20, 389)
         Me.lblSoldItems.Name = "lblSoldItems"
         Me.lblSoldItems.Size = New System.Drawing.Size(0, 32)
         Me.lblSoldItems.TabIndex = 24
@@ -196,7 +196,7 @@ Partial Class History
         Me.lblProfit.BackColor = System.Drawing.Color.Transparent
         Me.lblProfit.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblProfit.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblProfit.Location = New System.Drawing.Point(18, 275)
+        Me.lblProfit.Location = New System.Drawing.Point(20, 303)
         Me.lblProfit.Name = "lblProfit"
         Me.lblProfit.Size = New System.Drawing.Size(0, 32)
         Me.lblProfit.TabIndex = 23
@@ -207,7 +207,7 @@ Partial Class History
         Me.lblExpenses.BackColor = System.Drawing.Color.Transparent
         Me.lblExpenses.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblExpenses.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblExpenses.Location = New System.Drawing.Point(18, 198)
+        Me.lblExpenses.Location = New System.Drawing.Point(20, 217)
         Me.lblExpenses.Name = "lblExpenses"
         Me.lblExpenses.Size = New System.Drawing.Size(0, 32)
         Me.lblExpenses.TabIndex = 22
@@ -218,7 +218,7 @@ Partial Class History
         Me.lblRevenue.BackColor = System.Drawing.Color.Transparent
         Me.lblRevenue.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblRevenue.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblRevenue.Location = New System.Drawing.Point(18, 123)
+        Me.lblRevenue.Location = New System.Drawing.Point(20, 131)
         Me.lblRevenue.Name = "lblRevenue"
         Me.lblRevenue.Size = New System.Drawing.Size(0, 32)
         Me.lblRevenue.TabIndex = 21
@@ -229,7 +229,7 @@ Partial Class History
         Me.lblDate.BackColor = System.Drawing.Color.Transparent
         Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblDate.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblDate.Location = New System.Drawing.Point(18, 50)
+        Me.lblDate.Location = New System.Drawing.Point(20, 50)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(0, 32)
         Me.lblDate.TabIndex = 20
