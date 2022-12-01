@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Security.Policy
 Imports System.Windows.Documents
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports FontAwesome.Sharp
@@ -78,24 +79,22 @@ Public Class dashboardPOS
     End Sub
 
     Public Sub DynamicButton_click(ByVal sender As Object, ByVal e As EventArgs)
-
         Try
-                con.Open()
-                cmd = New SqlCommand("select * from Items where ID= @ID", con)
-                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = sender.tag.ToString
-                dr = cmd.ExecuteReader
-
-                While dr.Read
-                    lastRecord = dr.Item("price")
-                    total += CDbl(dr.Item("price").ToString)
-                    DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
-                End While
-                dr.Close()
-                con.Close()
-                lblTotal.Text = Format(total, "#,##.00")
-            Catch ex As Exception
-                MsgBox("Database Error", MsgBoxStyle.Critical)
-            End Try
+            con.Open()
+            cmd = New SqlCommand("select * from Items where ID= @ID", con)
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = sender.tag.ToString
+            dr = cmd.ExecuteReader
+            While dr.Read
+                lastRecord = dr.Item("price")
+                total += CDbl(dr.Item("price").ToString)
+                DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
+            End While
+            dr.Close()
+            con.Close()
+            lblTotal.Text = Format(total, "#,##.00")
+        Catch ex As Exception
+            MsgBox("Database Error", MsgBoxStyle.Critical)
+        End Try
 
 
 
@@ -117,9 +116,15 @@ Public Class dashboardPOS
         Dim rand As New Random
         Dim transcID As Integer = count1
         Dim confirmation As String = MsgBox("Checkout?", MsgBoxStyle.YesNo, "Confirmation")
+        Dim change As Double
         If confirmation = vbYes Then
             Dim cash As Double = InputBox("Cash: ", "Cash")
-            Dim change As Double = cash - total
+            If cash < total Then
+                MsgBox("Unsufficient Balance!")
+            Else
+                change = cash - total
+            End If
+
             Try
                 cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Revenue,@Expenses,@Profit,@SoldItems)", con)
                 cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
@@ -136,6 +141,7 @@ Public Class dashboardPOS
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
                 lblTotal.Text = "0.00"
+                total = 0
                 DataGridView1.Rows.Clear()
             Catch ex As Exception
                 con.Close()

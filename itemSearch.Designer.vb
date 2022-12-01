@@ -39,10 +39,9 @@ Partial Class itemSearch
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(318, 16)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel1.Location = New System.Drawing.Point(278, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1113, 893)
+        Me.Panel1.Size = New System.Drawing.Size(974, 670)
         Me.Panel1.TabIndex = 0
         '
         'Label2
@@ -51,9 +50,9 @@ Partial Class itemSearch
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(11, 89)
+        Me.Label2.Location = New System.Drawing.Point(10, 67)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 25)
+        Me.Label2.Size = New System.Drawing.Size(59, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Search:"
         '
@@ -63,26 +62,24 @@ Partial Class itemSearch
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Impact", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(329, 33)
+        Me.Label1.Location = New System.Drawing.Point(288, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 34)
+        Me.Label1.Size = New System.Drawing.Size(116, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Item Search"
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(427, 105)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtSearch.Location = New System.Drawing.Point(374, 79)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(390, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(342, 23)
         Me.txtSearch.TabIndex = 2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1078, 105)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Location = New System.Drawing.Point(943, 79)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 31)
+        Me.Button1.Size = New System.Drawing.Size(126, 23)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
@@ -91,15 +88,15 @@ Partial Class itemSearch
         '
         Me.dgvItems.AllowUserToResizeColumns = False
         Me.dgvItems.AllowUserToResizeRows = False
+        Me.dgvItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvItems.Location = New System.Drawing.Point(329, 144)
-        Me.dgvItems.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dgvItems.Location = New System.Drawing.Point(288, 108)
         Me.dgvItems.Name = "dgvItems"
         Me.dgvItems.ReadOnly = True
         Me.dgvItems.RowHeadersWidth = 51
         Me.dgvItems.RowTemplate.Height = 25
-        Me.dgvItems.Size = New System.Drawing.Size(1027, 589)
+        Me.dgvItems.Size = New System.Drawing.Size(899, 442)
         Me.dgvItems.TabIndex = 1
         '
         'ComboBox1
@@ -107,19 +104,18 @@ Partial Class itemSearch
         Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"ID", "Name", "Brand", "Size"})
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"ID", "Product Name", "Brand", "Size"})
-        Me.ComboBox1.Location = New System.Drawing.Point(825, 105)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ComboBox1.Location = New System.Drawing.Point(722, 79)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(245, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(215, 23)
         Me.ComboBox1.TabIndex = 2
         '
         'itemSearch
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1199, 562)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
@@ -127,7 +123,6 @@ Partial Class itemSearch
         Me.Controls.Add(Me.dgvItems)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "itemSearch"
         Me.Text = "Item Search"
         Me.Panel1.ResumeLayout(False)
