@@ -1,7 +1,10 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Reflection.Emit
 Imports System.Transactions
 Imports System.Windows
+Imports System.Windows.Controls
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Login
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
@@ -11,6 +14,7 @@ Public Class Login
 
 
     End Sub
+
 
     Private Sub lblForgotPwd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
 
@@ -63,6 +67,31 @@ Public Class Login
         End Try
 
 
+
     End Sub
 
+
+    Private Sub txtPassword_key(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnLogin_Click_1(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+    End Sub
+
+    Private Sub txtPassword_keys(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnLogin_Click_1(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+    End Sub
+
+    Private Sub Enter(sender As Object, e As KeyPressEventArgs) Handles btnLogin.KeyPress
+
+    End Sub
 End Class
