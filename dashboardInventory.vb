@@ -75,43 +75,69 @@ Public Class dashboardInventory
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        If (ComboBox1.Text = "ID") Then
-            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
-            Dim cmd2 As New SqlCommand("select * from Items where ID = '" + txtSearch.Text + "'", con)
-            con.Open()
-            Dim sda As New SqlDataAdapter(cmd2)
-            Dim dt As New DataTable()
-            sda.Fill(dt)
-            DataGridView1.DataSource = dt
-            con.Close()
-        ElseIf (ComboBox1.Text = "Product Name") Then
-            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
-            Dim cmd2 As New SqlCommand("select * from Items where ItemName = '" + txtSearch.Text + "'", con)
-            con.Open()
-            Dim sda As New SqlDataAdapter(cmd2)
-            Dim ds As New DataSet()
-            sda.Fill(ds)
-            DataGridView1.DataSource = ds.Tables(0)
-            con.Close()
-        ElseIf (ComboBox1.Text = "Brand") Then
-            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
-            Dim cmd2 As New SqlCommand("select * from Items where Brand ='" + txtSearch.Text + "'", con)
-            con.Open()
-            Dim sda As New SqlDataAdapter(cmd2)
-            Dim ds As New DataSet()
-            sda.Fill(ds)
-            DataGridView1.DataSource = ds.Tables(0)
-            con.Close()
-        ElseIf (ComboBox1.Text = "Size") Then
-            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
-            Dim cmd2 As New SqlCommand("select * from Items where Size = '" + txtSearch.Text + "'", con)
-            con.Open()
-            Dim sda As New SqlDataAdapter(cmd2)
-            Dim ds As New DataSet()
-            sda.Fill(ds)
-            DataGridView1.DataSource = ds.Tables(0)
-            con.Close()
+        DataGridView1.Rows.Clear()
 
+        If (ComboBox1.Text = "ID") Then
+            Try
+                Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
+                cmdd.Parameters.Add("@ID", SqlDbType.Int).Value = txtSearch.Text
+                con.Open()
+                dr = cmdd.ExecuteReader
+                While dr.Read
+                    DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("Price"))
+                End While
+                dr.Close()
+                con.Close()
+            Catch ex As Exception
+                con.Close()
+                MsgBox(ex.Message + " error")
+            End Try
+
+        ElseIf (ComboBox1.Text = "Product Name") Then
+            Try
+                Dim cmdd As New SqlCommand("select * from Items where ItemName= @ItemName", con)
+                cmdd.Parameters.Add("@ItemName", SqlDbType.VarChar).Value = txtSearch.Text
+                con.Open()
+                dr = cmdd.ExecuteReader
+                While dr.Read
+                    DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("Price"))
+                End While
+                dr.Close()
+                con.Close()
+            Catch ex As Exception
+                con.Close()
+                MsgBox(ex.Message + " error")
+            End Try
+        ElseIf (ComboBox1.Text = "Brand") Then
+            Try
+                Dim cmdd As New SqlCommand("select * from Items where Brand= @Brand", con)
+                cmdd.Parameters.Add("@Brand", SqlDbType.VarChar).Value = txtSearch.Text
+                con.Open()
+                dr = cmdd.ExecuteReader
+                While dr.Read
+                    DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("Price"))
+                End While
+                dr.Close()
+                con.Close()
+            Catch ex As Exception
+                con.Close()
+                MsgBox(ex.Message + " error")
+            End Try
+        ElseIf (ComboBox1.Text = "Size") Then
+            Try
+                Dim cmdd As New SqlCommand("select * from Items where Size= @size", con)
+                cmdd.Parameters.Add("@size", SqlDbType.VarChar).Value = txtSearch.Text
+                con.Open()
+                dr = cmdd.ExecuteReader
+                While dr.Read
+                    DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("Price"))
+                End While
+                dr.Close()
+                con.Close()
+            Catch ex As Exception
+                con.Close()
+                MsgBox(ex.Message + " error")
+            End Try
         End If
     End Sub
 End Class
