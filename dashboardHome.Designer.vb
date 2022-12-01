@@ -29,9 +29,9 @@ Partial Class dashboardHome
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Chart1 = New FastReport.DataVisualization.Charting.Chart()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.prdtLabel = New System.Windows.Forms.Label()
         Me.saleLabel = New System.Windows.Forms.Label()
+        Me.prdtLabel = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -87,16 +87,16 @@ Partial Class dashboardHome
         Me.Panel1.Size = New System.Drawing.Size(241, 329)
         Me.Panel1.TabIndex = 2
         '
-        'Panel2
+        'saleLabel
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(21, 28)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(863, 48)
-        Me.Panel2.TabIndex = 3
+        Me.saleLabel.AutoSize = True
+        Me.saleLabel.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.saleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.saleLabel.Location = New System.Drawing.Point(19, 249)
+        Me.saleLabel.Name = "saleLabel"
+        Me.saleLabel.Size = New System.Drawing.Size(121, 50)
+        Me.saleLabel.TabIndex = 1
+        Me.saleLabel.Text = "PHP 10.00" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "5 Sold"
         '
         'prdtLabel
         '
@@ -109,16 +109,16 @@ Partial Class dashboardHome
         Me.prdtLabel.TabIndex = 0
         Me.prdtLabel.Text = "Product Name"
         '
-        'saleLabel
+        'Panel2
         '
-        Me.saleLabel.AutoSize = True
-        Me.saleLabel.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.saleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.saleLabel.Location = New System.Drawing.Point(19, 249)
-        Me.saleLabel.Name = "saleLabel"
-        Me.saleLabel.Size = New System.Drawing.Size(121, 50)
-        Me.saleLabel.TabIndex = 1
-        Me.saleLabel.Text = "PHP 10.00" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "5 Sold"
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Location = New System.Drawing.Point(21, 28)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(863, 48)
+        Me.Panel2.TabIndex = 3
         '
         'dashboardHome
         '

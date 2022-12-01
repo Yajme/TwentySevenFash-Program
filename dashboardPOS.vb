@@ -25,7 +25,7 @@ Public Class dashboardPOS
         dr = cmd.ExecuteReader
 
         While dr.Read
-            total += CDbl(dr.Item("price").ToString)
+            total += CDbl(dr.Item("seelingPrice").ToString)
             DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
         End While
         dr.Close()
@@ -197,7 +197,7 @@ Public Class dashboardPOS
             Dim myFont As System.Drawing.Font
             myFont = New System.Drawing.Font("Impact", 12)
             FlowLayoutPanel1.Controls.Clear()
-            Dim myFont As System.Drawing.Font
+            Dim myFonts As System.Drawing.Font
             myFont = New System.Drawing.Font("Impact", 12)
             While dr.Read
                 newButton = New Button()
@@ -209,7 +209,7 @@ Public Class dashboardPOS
                     .Name = "btnItem" + count.ToString()
                     .Tag = dr.Item("ID").ToString()
                     .Text = dr.Item("ItemName").ToString()
-                    .Font = myFont
+                    .Font = myFonts
                     .FlatStyle = FlatStyle.Flat
                     .FlatAppearance.BorderSize = 3
                     .FlatAppearance.BorderColor = Color.White
