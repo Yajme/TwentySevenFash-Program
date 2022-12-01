@@ -14,35 +14,6 @@ Public Class signup
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs)
-
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim comm As New SqlCommand("INSERT INTO users (id, username, password, usertype) VALUES (@Id, @username,  @password, @type)", con)
@@ -69,8 +40,32 @@ Public Class signup
         txtPass.Text = ""
         txtUserN.Text = ""
     End Sub
+    Private Sub txtID_keys(sender As Object, e As KeyEventArgs) Handles txtType.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Button1_Click_1(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
 
-    Private Sub txtID_TextChanged(sender As Object, e As EventArgs) 
+        e.SuppressKeyPress = True
+    End Sub
+    Private Sub txtType_keys(sender As Object, e As KeyEventArgs) Handles txtUserN.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Button1_Click_1(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
 
+        e.SuppressKeyPress = True
+    End Sub
+
+    Private Sub txtUserN_keys(sender As Object, e As KeyEventArgs) Handles txtPass.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Button1_Click_1(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
     End Sub
 End Class
