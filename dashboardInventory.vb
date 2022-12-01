@@ -1,10 +1,13 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Controls
+
 Public Class dashboardInventory
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
     Dim cmd As SqlCommand
+    Dim cmdd As New SqlCommand("select * from items")
     Dim dr As SqlDataReader
     Private Sub dashboardInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loaditems()
+        LoadItems()
     End Sub
 
 
@@ -36,7 +39,7 @@ Public Class dashboardInventory
                 .btnAddItem.Visible = False
                 .ShowDialog()
             End With
-            loaditems()
+            LoadItems()
         ElseIf colName = "ColDelete" Then
             If MsgBox("Are you Sure to Delete this record?", vbYesNo + vbQuestion, "Confirmation") = vbYes Then
                 con.Open()
@@ -69,5 +72,46 @@ Public Class dashboardInventory
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         itemSearch.Show()
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        If (ComboBox1.Text = "ID") Then
+            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
+            Dim cmd2 As New SqlCommand("select * from Items where ID = '" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim dt As New DataTable()
+            sda.Fill(dt)
+            DataGridView1.DataSource = dt
+            con.Close()
+        ElseIf (ComboBox1.Text = "Product Name") Then
+            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
+            Dim cmd2 As New SqlCommand("select * from Items where ItemName = '" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+            con.Close()
+        ElseIf (ComboBox1.Text = "Brand") Then
+            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
+            Dim cmd2 As New SqlCommand("select * from Items where Brand ='" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+            con.Close()
+        ElseIf (ComboBox1.Text = "Size") Then
+            Dim cmdd As New SqlCommand("select * from Items where ID = @ID", con)
+            Dim cmd2 As New SqlCommand("select * from Items where Size = '" + txtSearch.Text + "'", con)
+            con.Open()
+            Dim sda As New SqlDataAdapter(cmd2)
+            Dim ds As New DataSet()
+            sda.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+            con.Close()
+
+        End If
     End Sub
 End Class
