@@ -85,15 +85,16 @@ Public Class dashboardPOS
             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = sender.tag.ToString
             dr = cmd.ExecuteReader
             While dr.Read
-                lastRecord = dr.Item("price")
-                total += CDbl(dr.Item("price").ToString)
-                DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
+                lastRecord = dr.Item("SellingPrice")
+                total += CDbl(dr.Item("SellingPrice").ToString)
+                DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("SellingPrice").ToString), "#,##0.00"))
             End While
             dr.Close()
             con.Close()
             lblTotal.Text = Format(total, "#,##.00")
         Catch ex As Exception
-            MsgBox("Database Error", MsgBoxStyle.Critical)
+            con.Close()
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try
 
 
@@ -188,43 +189,92 @@ Public Class dashboardPOS
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
+
         If TextBox1.Text <> String.Empty Then
-            con.Open()
-            cmd = New SqlCommand("select * from items where id= @ID", con)
-            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
-            dr = cmd.ExecuteReader
-            Dim count As Integer
-            Dim myFont As System.Drawing.Font
-            myFont = New System.Drawing.Font("Impact", 12)
-            FlowLayoutPanel1.Controls.Clear()
-            While dr.Read
-                newButton = New Button()
+            If Integer.TryParse(TextBox1.Text, Nothing) Then
+                Try
+                    con.Open()
+                    cmd = New SqlCommand("select * from items where ID= @ID", con)
+                    cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
+                    dr = cmd.ExecuteReader
+                    Dim count As Integer
+                    Dim myFont As System.Drawing.Font
+                    myFont = New System.Drawing.Font("Impact", 12)
+                    FlowLayoutPanel1.Controls.Clear()
+                    While dr.Read
+                        newButton = New Button()
 
-                With newButton
-                    .BackColor = Color.FromArgb(46, 51, 73)
-                    .ForeColor = Color.White
-                    .Size = New Size(200, 123)
-                    .Name = "btnItem" + count.ToString()
-                    .Tag = dr.Item("ID").ToString()
-                    .Text = dr.Item("ItemName").ToString()
-                    .Font = myFont
-                    .FlatStyle = FlatStyle.Flat
-                    .FlatAppearance.BorderSize = 3
-                    .FlatAppearance.BorderColor = Color.White
-                End With
+                        With newButton
+                            .BackColor = Color.FromArgb(46, 51, 73)
+                            .ForeColor = Color.White
+                            .Size = New Size(200, 123)
+                            .Name = "btnItem" + count.ToString()
+                            .Tag = dr.Item("ID").ToString()
+                            .Text = dr.Item("ItemName").ToString()
+                            .Font = myFont
+                            .FlatStyle = FlatStyle.Flat
+                            .FlatAppearance.BorderSize = 3
+                            .FlatAppearance.BorderColor = Color.White
+                        End With
 
-                FlowLayoutPanel1.Controls.Add(newButton)
+                        FlowLayoutPanel1.Controls.Add(newButton)
 
-                count += 1
-                AddHandler newButton.Click, AddressOf DynamicButton_click
+                        count += 1
+                        AddHandler newButton.Click, AddressOf DynamicButton_click
 
 
-            End While
-            con.Close()
+                    End While
+                    con.Close()
+                Catch ex As Exception
+                    MsgBox(ex.Message + "error")
+                    con.Close()
+                End Try
+            ElseIf TextBox1.Text.Contains("") <> False Then
+
+                Try
+                    con.Open()
+
+                    cmd = New SqlCommand("select * from items where id= @ID", con)
+                    cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
+                    dr = cmd.ExecuteReader
+                    Dim count As Integer
+                    Dim myFont As System.Drawing.Font
+                    myFont = New System.Drawing.Font("Impact", 12)
+                    FlowLayoutPanel1.Controls.Clear()
+                    While dr.Read
+                        newButton = New Button()
+
+                        With newButton
+                            .BackColor = Color.FromArgb(46, 51, 73)
+                            .ForeColor = Color.White
+                            .Size = New Size(200, 123)
+                            .Name = "btnItem" + count.ToString()
+                            .Tag = dr.Item("ID").ToString()
+                            .Text = dr.Item("ItemName").ToString()
+                            .Font = myFont
+                            .FlatStyle = FlatStyle.Flat
+                            .FlatAppearance.BorderSize = 3
+                            .FlatAppearance.BorderColor = Color.White
+                        End With
+
+                        FlowLayoutPanel1.Controls.Add(newButton)
+
+                        count += 1
+                        AddHandler newButton.Click, AddressOf DynamicButton_click
+
+
+                    End While
+                    con.Close()
+                Catch ex As Exception
+                    MsgBox(ex.Message + "error")
+                    con.Close()
+                End Try
+            End If
+
+
         ElseIf TextBox1.Text = String.Empty Then
             LoadItems()
         End If
-
 
 
     End Sub

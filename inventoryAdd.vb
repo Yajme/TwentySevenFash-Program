@@ -9,20 +9,19 @@ Public Class inventoryAdd
         Me.Dispose()
     End Sub
 
-    Private Sub inventoryAdd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
         Dim confirmation As String = MsgBox("Are you sure to Add Item?", MsgBoxStyle.YesNo, "Confirmation")
         If confirmation = vbYes Then
             Try
-                cmd = New SqlCommand("insert into items values(@ID, @ItemName, @Brand, @Size, @Price)", con)
+                cmd = New SqlCommand("insert into items values(@ID, @ItemName, @Brand, @Size, @NormalPrice, @SellingPrice)", con)
                 cmd.Parameters.AddWithValue("@ID", txtID.Text)
                 cmd.Parameters.AddWithValue("@ItemName", txtItemName.Text)
                 cmd.Parameters.AddWithValue("Brand", txtBrand.Text)
                 cmd.Parameters.AddWithValue("Size", cmbSize.SelectedItem)
-                cmd.Parameters.AddWithValue("Price", txtPrice.Text)
+                cmd.Parameters.AddWithValue("Price", txtNPrice.Text)
+                cmd.Parameters.AddWithValue("SellingPrice", txtSPrice.Text)
 
                 con.Open()
                 cmd.ExecuteNonQuery()
@@ -44,12 +43,13 @@ Public Class inventoryAdd
         Dim confirmation As String = MsgBox("Are you sure to Update Item?", MsgBoxStyle.YesNo, "Confirmation")
         If confirmation = vbYes Then
             Try
-                cmd = New SqlCommand("update items set ItemName=@ItemName, Brand=@Brand, Size=@Size, Price=@Price where Id=@ID", con)
+                cmd = New SqlCommand("update items set ItemName=@ItemName, Brand=@Brand, Size=@Size, NormalPrice=@NormalPrice, SellingPrice=@SellingPrice where Id=@ID", con)
                 cmd.Parameters.AddWithValue("@ID", txtID.Text)
                 cmd.Parameters.AddWithValue("@ItemName", txtItemName.Text)
                 cmd.Parameters.AddWithValue("Brand", txtBrand.Text)
                 cmd.Parameters.AddWithValue("Size", cmbSize.SelectedItem)
-                cmd.Parameters.AddWithValue("Price", txtPrice.Text)
+                cmd.Parameters.AddWithValue("NormalPrice", txtNPrice.Text)
+                cmd.Parameters.AddWithValue("SellingPrice", txtSPrice.Text)
 
                 con.Open()
                 cmd.ExecuteNonQuery()
