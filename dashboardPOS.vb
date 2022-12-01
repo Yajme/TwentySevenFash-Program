@@ -197,6 +197,8 @@ Public Class dashboardPOS
             Dim myFont As System.Drawing.Font
             myFont = New System.Drawing.Font("Impact", 12)
             FlowLayoutPanel1.Controls.Clear()
+            Dim myFont As System.Drawing.Font
+            myFont = New System.Drawing.Font("Impact", 12)
             While dr.Read
                 newButton = New Button()
 
