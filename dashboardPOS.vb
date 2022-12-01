@@ -25,7 +25,7 @@ Public Class dashboardPOS
         dr = cmd.ExecuteReader
 
         While dr.Read
-            total += CDbl(dr.Item("seelingPrice").ToString)
+            total += CDbl(dr.Item("Price").ToString)
             DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
         End While
         dr.Close()
