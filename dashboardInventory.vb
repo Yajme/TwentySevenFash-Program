@@ -71,9 +71,7 @@ Public Class dashboardInventory
         loaditems()
     End Sub
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        itemSearch.Show()
-    End Sub
+
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         DataGridView1.Rows.Clear()

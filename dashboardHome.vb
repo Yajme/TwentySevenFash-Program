@@ -97,4 +97,8 @@ Public Class dashboardHome
     Private Sub Chart1_Click(sender As Object, e As EventArgs) Handles Chart1.Click
 
     End Sub
+
+    Private Sub prdtLabel_Click(sender As Object, e As EventArgs) Handles prdtLabel.Click
+
+    End Sub
 End Class
