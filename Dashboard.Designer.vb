@@ -42,8 +42,6 @@ Partial Class Dashboard
         Me.lblTime = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MENUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChangePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SignUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -288,40 +286,28 @@ Partial Class Dashboard
         '
         'MENUToolStripMenuItem
         '
-        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangePasswordToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.SignUpToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MENUToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SignUpToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MENUToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.MENUToolStripMenuItem.Name = "MENUToolStripMenuItem"
         Me.MENUToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
         Me.MENUToolStripMenuItem.Text = "MENU"
         '
-        'ChangePasswordToolStripMenuItem
-        '
-        Me.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem"
-        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
-        Me.ChangePasswordToolStripMenuItem.Text = "Change Password"
-        '
-        'SettingsToolStripMenuItem
-        '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
-        '
         'SignUpToolStripMenuItem
         '
         Me.SignUpToolStripMenuItem.Name = "SignUpToolStripMenuItem"
-        Me.SignUpToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
+        Me.SignUpToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.SignUpToolStripMenuItem.Text = "SignUp"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(207, 24)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'Dashboard

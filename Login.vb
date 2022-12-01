@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Transactions
+Imports System.Windows
 
 Public Class Login
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TwentySevenFash-Program\TwentySevenFash.mdf;Integrated Security=True")
@@ -40,7 +41,8 @@ Public Class Login
 
             sda.Fill(table)
             If table.Rows.Count() <= 0 Then
-                MsgBox("Enter Valid username and password", MsgBoxStyle.OkOnly, "Error")
+
+                MessageBox.Show("Enter Valid username and password", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
             If table.Rows(0)("USERTYPE") = "admin" Then
                 Dim dashboardmain As New Dashboard
@@ -57,7 +59,7 @@ Public Class Login
             con.Close()
         Catch ex As Exception
             con.Close()
-            MsgBox("Error " + ex.Message, MsgBoxStyle.Critical, "Error")
+
         End Try
 
 
