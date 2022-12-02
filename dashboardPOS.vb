@@ -123,28 +123,57 @@ Public Class dashboardPOS
         Dim sellingprice As New SqlCommand("Select SellingPrice from Items where Id = @ID", con)
         Dim solditems As New SqlCommand("select SoldItems from Sales where Id = @ID", con)
 
-        Dim datareadtopsellsold As SqlDataReader
-        Dim datareadtopsellprofit As SqlDataReader
-        Dim datareadtopsell As SqlDataReader
-        Dim datareadnormalprice As SqlDataReader
-        Dim datareadsellingprice As SqlDataReader
-        Dim datareadsolditems As SqlDataReader
+        Dim topsellsoldreader = topsellsold.ExecuteReader()
+        Dim topsellprofitreader = topsellprofit.ExecuteReader()
+        Dim topsellreader = topsell.ExecuteReader()
+        Dim normalpricereader = normalprice.ExecuteReader()
+        Dim sellingpricereader = sellingprice.ExecuteReader()
+        Dim solditemsreader = solditems.ExecuteReader()
 
-        datareadtopsellsold = topsellsold.ExecuteReader
-        datareadtopsellprofit = topsellprofit.ExecuteReader
-        datareadtopsell = topsell.ExecuteReader
-        datareadnormalprice = normalprice.ExecuteReader
-        datareadsellingprice = sellingprice.ExecuteReader
-        datareadsolditems = solditems.ExecuteReader
+        Dim topsellsoldhere As Double
+        Dim topsellprofithere As Double
+        Dim topsellhere As Double
+        Dim normalpricehere As Double
+        Dim sellingpricehere As Double
+        Dim solditemshere As Double
 
-        Dim topsellsoldhere As Double =
-        Dim solditemshere As double =
-        Dim topsellprofithere As Double =
-        Dim normalpricehere As double =
-        Dim sellingpricehere As Double = 
+        If topsellsoldreader.Read() Then
 
-        Dim totaltopprofit As Double = sellingpricehere - normalpricehere
-        Dim totaltopsell As Double = topsellsoldhere + solditemshere
+            topsellsoldhere = Convert.ToInt32(topsellsold)
+
+        End If
+
+        If topsellprofitreader.Read() Then
+
+            topsellprofithere = Convert.ToInt32(topsellprofit)
+        End If
+        If topsellreader.Read() Then
+
+            topsellhere = Convert.ToInt32(topsell)
+
+        End If
+        If normalpricereader.Read() Then
+
+            normalpricehere = Convert.ToInt32(normalprice)
+        End If
+
+        If sellingpricereader.Read() Then
+
+            sellingpricehere = Convert.ToInt32(sellingprice)
+
+        End If
+
+        If solditemsreader.Read() Then
+
+            solditemshere = Convert.ToInt32(solditems)
+
+        End If
+
+        Dim totalsolditems = topsellsoldhere + solditemshere
+        Dim totalprofit = sellingpricehere - normalpricehere
+
+        con.Close()
+
 
         Dim rand As New Random
         Dim transcID As Integer = count1
@@ -169,8 +198,8 @@ Public Class dashboardPOS
                 cmd.Parameters.AddWithValue("@Profit", total)
                 cmd.Parameters.AddWithValue("@SoldItems", DataGridView1.Rows.Count.ToString)
 
-                topsell.Parameters.AddWithValue("@totalSold", totaltopsell)
-                topsell.Parameters.AddWithValue("@totalprofit", totaltopprofit)
+                topsell.Parameters.AddWithValue("@totalSold", totalsolditems)
+                topsell.Parameters.AddWithValue("@totalprofit", totalprofit)
 
                 con.Open()
                 cmd.ExecuteNonQuery()
@@ -186,7 +215,6 @@ Public Class dashboardPOS
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
             End Try
         End If
-        con.Close()
 
     End Sub
 
