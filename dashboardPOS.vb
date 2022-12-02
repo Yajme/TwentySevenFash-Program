@@ -114,6 +114,38 @@ Public Class dashboardPOS
         Dim count1 = Convert.ToInt16(county.ExecuteScalar)
 
         con.Close()
+
+        con.Open()
+        Dim topsellsold As New SqlCommand("select totalSold from TopSeller where productID = @ID", con)
+        Dim topsellprofit As New SqlCommand("select totalProfit from TopSeller where productID = @ID", con)
+        Dim topsell As New SqlCommand("update TopSeller values(@totalSold,@totalProfit) where productID = @ID", con)
+        Dim normalprice As New SqlCommand("Select NormalPrice from Items where Id = @ID", con)
+        Dim sellingprice As New SqlCommand("Select SellingPrice from Items where Id = @ID", con)
+        Dim solditems As New SqlCommand("select SoldItems from Sales where Id = @ID", con)
+
+        Dim datareadtopsellsold As SqlDataReader
+        Dim datareadtopsellprofit As SqlDataReader
+        Dim datareadtopsell As SqlDataReader
+        Dim datareadnormalprice As SqlDataReader
+        Dim datareadsellingprice As SqlDataReader
+        Dim datareadsolditems As SqlDataReader
+
+        datareadtopsellsold = topsellsold.ExecuteReader
+        datareadtopsellprofit = topsellprofit.ExecuteReader
+        datareadtopsell = topsell.ExecuteReader
+        datareadnormalprice = normalprice.ExecuteReader
+        datareadsellingprice = sellingprice.ExecuteReader
+        datareadsolditems = solditems.ExecuteReader
+
+        Dim topsellsoldhere As Double =
+        Dim solditemshere As double =
+        Dim topsellprofithere As Double =
+        Dim normalpricehere As double =
+        Dim sellingpricehere As Double = 
+
+        Dim totaltopprofit As Double = sellingpricehere - normalpricehere
+        Dim totaltopsell As Double = topsellsoldhere + solditemshere
+
         Dim rand As New Random
         Dim transcID As Integer = count1
         Dim confirmation As String = MsgBox("Checkout?", MsgBoxStyle.YesNo, "Confirmation")
@@ -121,12 +153,14 @@ Public Class dashboardPOS
         If confirmation = vbYes Then
             Dim cash As Double = InputBox("Cash: ", "Cash")
             If cash < total Then
-                MsgBox("Unsufficient Balance!")
+                MsgBox("Insufficient Balance!")
             Else
                 change = cash - total
             End If
 
             Try
+
+
                 cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Revenue,@Expenses,@Profit,@SoldItems)", con)
                 cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
                 cmd.Parameters.AddWithValue("@ID", transcID)
@@ -135,9 +169,12 @@ Public Class dashboardPOS
                 cmd.Parameters.AddWithValue("@Profit", total)
                 cmd.Parameters.AddWithValue("@SoldItems", DataGridView1.Rows.Count.ToString)
 
+                topsell.Parameters.AddWithValue("@totalSold", totaltopsell)
+                topsell.Parameters.AddWithValue("@totalprofit", totaltopprofit)
 
                 con.Open()
                 cmd.ExecuteNonQuery()
+                topsell.ExecuteNonQuery()
                 con.Close()
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
@@ -149,7 +186,7 @@ Public Class dashboardPOS
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
             End Try
         End If
-
+        con.Close()
 
     End Sub
 
