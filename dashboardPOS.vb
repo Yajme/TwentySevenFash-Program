@@ -11,6 +11,8 @@ Public Class dashboardPOS
     Dim dr As SqlDataReader
     Dim newButton As Button
     Dim total As Double
+    Dim profit As Double
+    Dim expenses As Double
     Public Shared dashboardmain
     Public adminName As String = dashboardmain.ToString
     Dim lastRecord As Double
@@ -26,6 +28,7 @@ Public Class dashboardPOS
 
         While dr.Read
             total += CDbl(dr.Item("price").ToString)
+
             DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
         End While
         dr.Close()
@@ -87,6 +90,8 @@ Public Class dashboardPOS
             While dr.Read
                 lastRecord = dr.Item("SellingPrice")
                 total += CDbl(dr.Item("SellingPrice").ToString)
+                expenses += CDbl(dr.Item("NormalPrice"))
+                profit += CDbl(dr.Item("SellingPrice")) - CDbl(dr.Item("NormalPrice"))
                 DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("SellingPrice").ToString), "#,##0.00"))
             End While
             dr.Close()
@@ -106,6 +111,8 @@ Public Class dashboardPOS
         DataGridView1.Rows.Clear()
         lblTotal.Text = "0.00"
         total = 0
+        expenses = 0
+        profit = 0
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
@@ -113,9 +120,7 @@ Public Class dashboardPOS
         Dim county As New SqlCommand("select count(*) from Sales", con)
         Dim count1 = Convert.ToInt16(county.ExecuteScalar)
 
-        con.Close()
 
-        con.Open()
         Dim topsellsold As New SqlCommand("select totalSold from TopSeller where productID = @ID", con)
         Dim topsellprofit As New SqlCommand("select totalProfit from TopSeller where productID = @ID", con)
         Dim topsell As New SqlCommand("update TopSeller values(@totalSold,@totalProfit) where productID = @ID", con)
@@ -123,57 +128,14 @@ Public Class dashboardPOS
         Dim sellingprice As New SqlCommand("Select SellingPrice from Items where Id = @ID", con)
         Dim solditems As New SqlCommand("select SoldItems from Sales where Id = @ID", con)
 
-        Dim topsellsoldreader = topsellsold.ExecuteReader()
-        Dim topsellprofitreader = topsellprofit.ExecuteReader()
-        Dim topsellreader = topsell.ExecuteReader()
-        Dim normalpricereader = normalprice.ExecuteReader()
-        Dim sellingpricereader = sellingprice.ExecuteReader()
-        Dim solditemsreader = solditems.ExecuteReader()
+        Dim topsellsoldhere As Double = 0
+        Dim solditemshere As Double = 0
+        Dim topsellprofithere As Double = 0
+        Dim normalpricehere As Double = 0
+        Dim sellingpricehere As Double = 0
 
-        Dim topsellsoldhere As Double
-        Dim topsellprofithere As Double
-        Dim topsellhere As Double
-        Dim normalpricehere As Double
-        Dim sellingpricehere As Double
-        Dim solditemshere As Double
-
-        If topsellsoldreader.Read() Then
-
-            topsellsoldhere = Convert.ToInt32(topsellsold)
-
-        End If
-
-        If topsellprofitreader.Read() Then
-
-            topsellprofithere = Convert.ToInt32(topsellprofit)
-        End If
-        If topsellreader.Read() Then
-
-            topsellhere = Convert.ToInt32(topsell)
-
-        End If
-        If normalpricereader.Read() Then
-
-            normalpricehere = Convert.ToInt32(normalprice)
-        End If
-
-        If sellingpricereader.Read() Then
-
-            sellingpricehere = Convert.ToInt32(sellingprice)
-
-        End If
-
-        If solditemsreader.Read() Then
-
-            solditemshere = Convert.ToInt32(solditems)
-
-        End If
-
-        Dim totalsolditems = topsellsoldhere + solditemshere
-        Dim totalprofit = sellingpricehere - normalpricehere
-
-        con.Close()
-
+        Dim totaltopprofit As Double = sellingpricehere - normalpricehere
+        Dim totaltopsell As Double = topsellsoldhere + solditemshere
 
         Dim rand As New Random
         Dim transcID As Integer = count1
@@ -194,27 +156,26 @@ Public Class dashboardPOS
                 cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
                 cmd.Parameters.AddWithValue("@ID", transcID)
                 cmd.Parameters.AddWithValue("@Revenue", total)
-                cmd.Parameters.AddWithValue("@Expenses", total.ToString)
-                cmd.Parameters.AddWithValue("@Profit", total)
+                cmd.Parameters.AddWithValue("@Expenses", expenses.ToString)
+                cmd.Parameters.AddWithValue("@Profit", profit)
                 cmd.Parameters.AddWithValue("@SoldItems", DataGridView1.Rows.Count.ToString)
 
-                topsell.Parameters.AddWithValue("@totalSold", totalsolditems)
-                topsell.Parameters.AddWithValue("@totalprofit", totalprofit)
-
-                con.Open()
                 cmd.ExecuteNonQuery()
-                topsell.ExecuteNonQuery()
-                con.Close()
+
+
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
                 lblTotal.Text = "0.00"
                 total = 0
                 DataGridView1.Rows.Clear()
+
             Catch ex As Exception
-                con.Close()
+
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
             End Try
+
         End If
+        con.Close()
 
     End Sub
 

@@ -101,4 +101,10 @@ Public Class dashboardHome
     Private Sub prdtLabel_Click(sender As Object, e As EventArgs) Handles prdtLabel.Click
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Call dashboardHome_Load(sender, e)
+        Chart1.Series("Sales").Points.Clear()
+        LoadChart()
+    End Sub
 End Class

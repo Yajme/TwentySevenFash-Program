@@ -32,6 +32,7 @@ Partial Class dashboardHome
         Me.saleLabel = New System.Windows.Forms.Label()
         Me.prdtLabel = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -120,6 +121,20 @@ Partial Class dashboardHome
         Me.Panel2.Size = New System.Drawing.Size(863, 48)
         Me.Panel2.TabIndex = 3
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Font = New System.Drawing.Font("Impact", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Button1.Location = New System.Drawing.Point(776, 357)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(97, 35)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Reload"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'dashboardHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -127,6 +142,7 @@ Partial Class dashboardHome
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(911, 431)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Panel2)
@@ -150,4 +166,5 @@ Partial Class dashboardHome
     Friend WithEvents Panel2 As Panel
     Friend WithEvents saleLabel As Label
     Friend WithEvents prdtLabel As Label
+    Friend WithEvents Button1 As Button
 End Class
