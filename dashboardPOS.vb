@@ -56,7 +56,7 @@ Public Class dashboardPOS
                         End While
                         con.Close()
                     Catch ex As Exception
-                        MsgBox(ex.Message + "error")
+                        MsgBox("Enter a proper ID!", MsgBoxStyle.Critical)
                         con.Close()
                     End Try
                 ElseIf TextBox1.Text.Contains("") <> False Then
@@ -96,7 +96,7 @@ Public Class dashboardPOS
                         End While
                         con.Close()
                     Catch ex As Exception
-                        MsgBox(ex.Message + "error")
+                        MsgBox("Enter the full name of the item!", MsgBoxStyle.Critical)
                         con.Close()
                     End Try
                 End If

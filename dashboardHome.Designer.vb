@@ -68,9 +68,12 @@ Partial Class dashboardHome
         Me.Chart1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
+        Series1.LabelAngle = -90
         Series1.Legend = "Legend1"
-        Series1.Name = "Sales"
+        Series1.Name = "Revenue"
+        Series1.XValueType = FastReport.DataVisualization.Charting.ChartValueType.[Date]
         Series1.YValuesPerPoint = 4
+        Series1.YValueType = FastReport.DataVisualization.Charting.ChartValueType.Int32
         Me.Chart1.Series.Add(Series1)
         Me.Chart1.Size = New System.Drawing.Size(622, 329)
         Me.Chart1.TabIndex = 1
