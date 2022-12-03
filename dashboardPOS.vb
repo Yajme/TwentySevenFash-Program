@@ -196,10 +196,12 @@ Public Class dashboardPOS
         Dim county As New SqlCommand("select count(*) from Sales", con)
         Dim count1 = Convert.ToInt16(county.ExecuteScalar)
 
+        con.Close()
 
         Dim topsellsold As New SqlCommand("select totalSold from TopSeller where productID = @ID", con)
         Dim topsellprofit As New SqlCommand("select totalProfit from TopSeller where productID = @ID", con)
-        Dim topsell As New SqlCommand("update TopSeller values(@totalSold,@totalProfit) where productID = @ID", con)
+        Dim topsell As New SqlCommand("update TopSeller SET totalSold = @ts, totalProfit = @tp WHERE productID = @ID", con)
+
         Dim normalprice As New SqlCommand("Select NormalPrice from Items where Id = @ID", con)
         Dim sellingprice As New SqlCommand("Select SellingPrice from Items where Id = @ID", con)
         Dim solditems As New SqlCommand("select SoldItems from Sales where Id = @ID", con)
@@ -229,6 +231,7 @@ Public Class dashboardPOS
 
 
                 cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Revenue,@Expenses,@Profit,@SoldItems)", con)
+
                 cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
                 cmd.Parameters.AddWithValue("@ID", transcID)
                 cmd.Parameters.AddWithValue("@Revenue", total)
@@ -236,8 +239,13 @@ Public Class dashboardPOS
                 cmd.Parameters.AddWithValue("@Profit", profit)
                 cmd.Parameters.AddWithValue("@SoldItems", DataGridView1.Rows.Count.ToString)
 
-                cmd.ExecuteNonQuery()
+                topsell.Parameters.Add("@ts", SqlDbType.Int).Value = totaltopsell
+                topsell.Parameters.Add("@tp", SqlDbType.Int).Value = totaltopprofit
 
+                con.Open()
+                topsell.ExecuteNonQuery()
+                cmd.ExecuteNonQuery()
+                con.Close()
 
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
@@ -251,7 +259,7 @@ Public Class dashboardPOS
             End Try
 
         End If
-        con.Close()
+
 
     End Sub
 
