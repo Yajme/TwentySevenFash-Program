@@ -65,7 +65,7 @@ Partial Class dashboardPOS
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(72, 32)
         Me.IconButton1.TabIndex = 1
-        Me.IconButton1.Text = "Enter"
+        Me.IconButton1.Text = "Search"
         Me.IconButton1.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel1

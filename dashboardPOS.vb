@@ -19,21 +19,97 @@ Public Class dashboardPOS
 
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        Try
+            If TextBox1.Text <> String.Empty Then
+                If Integer.TryParse(TextBox1.Text, Nothing) Then
+                    Try
+                        con.Open()
+                        cmd = New SqlCommand("select * from items where ID= @ID", con)
+                        cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
+                        dr = cmd.ExecuteReader
+                        Dim count As Integer
+                        Dim myFont As System.Drawing.Font
+                        myFont = New System.Drawing.Font("Impact", 12)
+                        FlowLayoutPanel1.Controls.Clear()
+                        While dr.Read
+                            newButton = New Button()
 
-        con.Open()
+                            With newButton
+                                .BackColor = Color.FromArgb(46, 51, 73)
+                                .ForeColor = Color.White
+                                .Size = New Size(200, 123)
+                                .Name = "btnItem" + count.ToString()
+                                .Tag = dr.Item("ID").ToString()
+                                .Text = dr.Item("ItemName").ToString()
+                                .Font = myFont
+                                .FlatStyle = FlatStyle.Flat
+                                .FlatAppearance.BorderSize = 3
+                                .FlatAppearance.BorderColor = Color.White
+                            End With
 
-        cmd = New SqlCommand("select * from Items where ID= @ID", con)
-        cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
-        dr = cmd.ExecuteReader
+                            FlowLayoutPanel1.Controls.Add(newButton)
 
-        While dr.Read
-            total += CDbl(dr.Item("price").ToString)
+                            count += 1
+                            AddHandler newButton.Click, AddressOf DynamicButton_click
 
-            DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("Price").ToString), "#,##0.00"))
-        End While
-        dr.Close()
-        con.Close()
-        lblTotal.Text = Format(total, "#,##.00")
+
+                        End While
+                        con.Close()
+                    Catch ex As Exception
+                        MsgBox(ex.Message + "error")
+                        con.Close()
+                    End Try
+                ElseIf TextBox1.Text.Contains("") <> False Then
+
+                    Try
+                        con.Open()
+
+                        cmd = New SqlCommand("select * from items where ItemName= @ItemName", con)
+                        cmd.Parameters.Add("@ItemName", SqlDbType.VarChar).Value = TextBox1.Text
+                        dr = cmd.ExecuteReader
+                        Dim count As Integer
+                        Dim myFont As System.Drawing.Font
+                        myFont = New System.Drawing.Font("Impact", 12)
+                        FlowLayoutPanel1.Controls.Clear()
+                        While dr.Read
+                            newButton = New Button()
+
+                            With newButton
+                                .BackColor = Color.FromArgb(46, 51, 73)
+                                .ForeColor = Color.White
+                                .Size = New Size(200, 123)
+                                .Name = "btnItem" + count.ToString()
+                                .Tag = dr.Item("ID").ToString()
+                                .Text = dr.Item("ItemName").ToString()
+                                .Font = myFont
+                                .FlatStyle = FlatStyle.Flat
+                                .FlatAppearance.BorderSize = 3
+                                .FlatAppearance.BorderColor = Color.White
+                            End With
+
+                            FlowLayoutPanel1.Controls.Add(newButton)
+
+                            count += 1
+                            AddHandler newButton.Click, AddressOf DynamicButton_click
+
+
+                        End While
+                        con.Close()
+                    Catch ex As Exception
+                        MsgBox(ex.Message + "error")
+                        con.Close()
+                    End Try
+                End If
+
+
+            ElseIf TextBox1.Text = String.Empty Then
+                LoadItems()
+            End If
+        Catch ex As Exception
+            MsgBox("Enter the full name of the item!", MsgBoxStyle.Critical)
+            con.Close()
+        End Try
+
 
 
 
@@ -260,8 +336,8 @@ Public Class dashboardPOS
                 Try
                     con.Open()
 
-                    cmd = New SqlCommand("select * from items where id= @ID", con)
-                    cmd.Parameters.Add("@ID", SqlDbType.Int).Value = TextBox1.Text
+                    cmd = New SqlCommand("select * from items where ItemName= @ItemName", con)
+                    cmd.Parameters.Add("@ItemName", SqlDbType.VarChar).Value = TextBox1.Text
                     dr = cmd.ExecuteReader
                     Dim count As Integer
                     Dim myFont As System.Drawing.Font
