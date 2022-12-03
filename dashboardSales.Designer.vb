@@ -202,9 +202,9 @@ Partial Class dashboardSales
         Me.BtnRefresh.BackgroundImage = CType(resources.GetObject("BtnRefresh.BackgroundImage"), System.Drawing.Image)
         Me.BtnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnRefresh.Location = New System.Drawing.Point(840, 389)
+        Me.BtnRefresh.Location = New System.Drawing.Point(728, 372)
         Me.BtnRefresh.Name = "BtnRefresh"
-        Me.BtnRefresh.Size = New System.Drawing.Size(54, 50)
+        Me.BtnRefresh.Size = New System.Drawing.Size(40, 42)
         Me.BtnRefresh.TabIndex = 6
         Me.BtnRefresh.TabStop = False
         '

@@ -28,7 +28,6 @@ Partial Class Login
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.lblForgotPwd = New System.Windows.Forms.LinkLabel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -47,7 +46,6 @@ Partial Class Login
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.lblForgotPwd)
         Me.Panel1.Controls.Add(Me.btnLogin)
         Me.Panel1.Controls.Add(Me.txtPassword)
         Me.Panel1.Controls.Add(Me.txtUsername)
@@ -90,21 +88,6 @@ Partial Class Login
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
         '
-        'lblForgotPwd
-        '
-        Me.lblForgotPwd.ActiveLinkColor = System.Drawing.Color.Aqua
-        Me.lblForgotPwd.AutoSize = True
-        Me.lblForgotPwd.BackColor = System.Drawing.Color.Transparent
-        Me.lblForgotPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblForgotPwd.ForeColor = System.Drawing.Color.White
-        Me.lblForgotPwd.LinkColor = System.Drawing.Color.White
-        Me.lblForgotPwd.Location = New System.Drawing.Point(206, 159)
-        Me.lblForgotPwd.Name = "lblForgotPwd"
-        Me.lblForgotPwd.Size = New System.Drawing.Size(122, 15)
-        Me.lblForgotPwd.TabIndex = 13
-        Me.lblForgotPwd.TabStop = True
-        Me.lblForgotPwd.Text = "Forgot Password?"
-        '
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.SystemColors.ButtonFace
@@ -114,7 +97,7 @@ Partial Class Login
         Me.btnLogin.FlatAppearance.BorderSize = 0
         Me.btnLogin.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnLogin.ForeColor = System.Drawing.Color.GhostWhite
-        Me.btnLogin.Location = New System.Drawing.Point(151, 196)
+        Me.btnLogin.Location = New System.Drawing.Point(150, 158)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(116, 32)
@@ -167,7 +150,6 @@ Partial Class Login
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lblForgotPwd As LinkLabel
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents txtUsername As TextBox
