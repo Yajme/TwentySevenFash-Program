@@ -83,7 +83,7 @@ Public Class dashboardInventory
                 con.Open()
                 dr = cmdd.ExecuteReader
                 While dr.Read
-                    DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("Price"))
+                    DataGridView1.Rows.Add(dr.Item("ID"), dr.Item("ItemName"), dr.Item("Brand"), dr.Item("Size"), dr.Item("NormalPrice"), dr.Item("SellingPrice"))
                 End While
                 dr.Close()
                 con.Close()
