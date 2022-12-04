@@ -26,8 +26,10 @@ Public Class dashboardHome
         val1 = 1
         vald = 0
         val2 = 0
+        Dim county As New SqlCommand("select count(*) from Sales", con)
+        Dim count1 = Convert.ToInt16(county.ExecuteScalar) + 2
 
-        While val1 <= 3
+        While val1 <= count1
             Dim doman As String = "Select productID,produtName,totalSold,totalProfit from TopSeller where productID=" & val1
             cmdd = New SqlCommand(doman, con)
             cmdd.Parameters.AddWithValue("productID", val1)

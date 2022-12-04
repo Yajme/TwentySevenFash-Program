@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 Imports System.Security.Policy
 Imports System.Windows.Documents
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
@@ -16,8 +17,14 @@ Public Class dashboardPOS
     Public Shared dashboardmain
     Public adminName As String = dashboardmain.ToString
     Dim lastRecord As Double
+    Dim add As DataTable
+    Dim adDR As SqlDataReader
+    Dim sets As DataSet
+    Dim adCMD As SqlCommand
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
+    End Sub
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Try
             If TextBox1.Text <> String.Empty Then
@@ -169,7 +176,9 @@ Public Class dashboardPOS
                 expenses += CDbl(dr.Item("NormalPrice"))
                 profit += CDbl(dr.Item("SellingPrice")) - CDbl(dr.Item("NormalPrice"))
                 DataGridView1.Rows.Add(dr.Item("Id").ToString, dr.Item("ItemName").ToString, Format(CDbl(dr.Item("SellingPrice").ToString), "#,##0.00"))
+
             End While
+            add = New DataTable(DataGridView1.DataSource)
             dr.Close()
             con.Close()
             lblTotal.Text = Format(total, "#,##.00")
@@ -192,28 +201,63 @@ Public Class dashboardPOS
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        DataGridView1.ColumnCount = 3
+        DataGridView1.Columns(0).Name = "ID"
+        DataGridView1.Columns(1).Name = "ItemName"
+        DataGridView1.Columns(2).Name = "Price"
         con.Open()
         Dim county As New SqlCommand("select count(*) from Sales", con)
-        Dim count1 = Convert.ToInt16(county.ExecuteScalar)
+        Dim count1 = Convert.ToInt16(county.ExecuteScalar) + 2
+        Dim loops As Integer
+        loops = DataGridView1.Rows.Count() - 1
+        Dim len As SqlDataReader
+        Dim valad As Integer
+        Dim profs As Double
+        Dim valadD As Double
+        Dim addings As Double
+        Dim laman As SqlDataReader
+        Dim ids As Integer
 
-        con.Close()
+        MsgBox(loops)
+        Try
+            Dim wh As Integer
+            While wh <= loops
 
-        Dim topsellsold As New SqlCommand("select totalSold from TopSeller where productID = @ID", con)
-        Dim topsellprofit As New SqlCommand("select totalProfit from TopSeller where productID = @ID", con)
-        Dim topsell As New SqlCommand("update TopSeller SET totalSold = @ts, totalProfit = @tp WHERE productID = @ID", con)
 
-        Dim normalprice As New SqlCommand("Select NormalPrice from Items where Id = @ID", con)
-        Dim sellingprice As New SqlCommand("Select SellingPrice from Items where Id = @ID", con)
-        Dim solditems As New SqlCommand("select SoldItems from Sales where Id = @ID", con)
+                ids = CInt(DataGridView1.Rows(wh).Cells(0).Value)
 
-        Dim topsellsoldhere As Double = 0
-        Dim solditemshere As Double = 0
-        Dim topsellprofithere As Double = 0
-        Dim normalpricehere As Double = 0
-        Dim sellingpricehere As Double = 0
 
-        Dim totaltopprofit As Double = sellingpricehere - normalpricehere
-        Dim totaltopsell As Double = topsellsoldhere + solditemshere
+                Dim tryds As String = "select totalSold from TopSeller where productID =" & ids & ";"
+                Dim trydz As String = "select totalProfit from TopSeller where productID =" & ids & ";"
+                Dim reads As SqlCommand = New SqlCommand(tryds, con)
+                Dim readz As SqlCommand = New SqlCommand(trydz, con)
+
+                Dim price As Double = CDbl(DataGridView1.Rows(wh).Cells(2).Value)
+                valad = reads.ExecuteScalar() + 1
+                valadD = readz.ExecuteScalar()
+
+
+                profs = valadD + price
+
+                Dim adds As String = "UPDATE TopSeller SET totalSold = " & valad & " , totalProfit = " & profs & " WHERE productID = " & ids & " ;"
+
+                adCMD = New SqlCommand(adds, con)
+                adCMD.ExecuteNonQuery()
+                wh += 1
+            End While
+
+
+            MsgBox(profs.ToString() & " l " & valad & ids)
+            MsgBox("Added")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+
+
+
+
 
         Dim rand As New Random
         Dim transcID As Integer = count1
@@ -231,7 +275,6 @@ Public Class dashboardPOS
 
 
                 cmd = New SqlCommand("insert into Sales values(@DateofTransaction,@ID,@Revenue,@Expenses,@Profit,@SoldItems)", con)
-
                 cmd.Parameters.AddWithValue("@DateofTransaction", DateString)
                 cmd.Parameters.AddWithValue("@ID", transcID)
                 cmd.Parameters.AddWithValue("@Revenue", total)
@@ -239,13 +282,8 @@ Public Class dashboardPOS
                 cmd.Parameters.AddWithValue("@Profit", profit)
                 cmd.Parameters.AddWithValue("@SoldItems", DataGridView1.Rows.Count.ToString)
 
-                topsell.Parameters.Add("@ts", SqlDbType.Int).Value = totaltopsell
-                topsell.Parameters.Add("@tp", SqlDbType.Int).Value = totaltopprofit
-
-                con.Open()
-                topsell.ExecuteNonQuery()
                 cmd.ExecuteNonQuery()
-                con.Close()
+
 
 
                 MsgBox("Transaction Complete" + Environment.NewLine() + "Change: " + Format(change, "#,##.00"))
@@ -259,7 +297,7 @@ Public Class dashboardPOS
             End Try
 
         End If
-
+        con.Close()
 
     End Sub
 
@@ -392,4 +430,6 @@ Public Class dashboardPOS
     Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
 
     End Sub
+
+
 End Class
