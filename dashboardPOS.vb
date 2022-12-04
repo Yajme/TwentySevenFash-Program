@@ -218,7 +218,6 @@ Public Class dashboardPOS
         Dim laman As SqlDataReader
         Dim ids As Integer
 
-        MsgBox(loops)
         Try
             Dim wh As Integer
             While wh <= loops
@@ -246,9 +245,6 @@ Public Class dashboardPOS
                 wh += 1
             End While
 
-
-            MsgBox(profs.ToString() & " l " & valad & ids)
-            MsgBox("Added")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
