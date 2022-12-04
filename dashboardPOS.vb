@@ -207,7 +207,7 @@ Public Class dashboardPOS
         DataGridView1.Columns(2).Name = "Price"
         con.Open()
         Dim county As New SqlCommand("select count(*) from Sales", con)
-        Dim count1 = Convert.ToInt16(county.ExecuteScalar) + 2
+        Dim count1 = Convert.ToInt16(county.ExecuteScalar) + 1
         Dim loops As Integer
         loops = DataGridView1.Rows.Count() - 1
         Dim len As SqlDataReader
